@@ -1,0 +1,91 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "height": 150,
+        "id": "alertPanel",
+        "itemId": "alertPanel",
+        "maxWidth": null,
+        "width": 300,
+        "designer|userClassName": "alertPanel",
+        "designer|userAlias": "alertPanel",
+        "modal": true,
+        "scrollable": false
+    },
+    "designerId": "bb54680e-6f44-4855-8c5f-b230d8add7b7",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "height": "100%",
+                "width": "100%",
+                "layout": "vbox"
+            },
+            "designerId": "bd629457-0987-45e4-ab1f-9a80e129e982",
+            "cn": [
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 65,
+                        "html": " <div align=\"center\" style=\"color: #fff;font-size: 12pt;\">Thank You!<br/>  Your Order has been processed<br/>  Go All Stars!<br/></div>",
+                        "margin": "0 0 10 0"
+                    },
+                    "designerId": "fb82525a-7f04-4e07-b2b9-1185844fc039"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "ui": "confirm",
+                        "width": 100,
+                        "text": "OK"
+                    },
+                    "designerId": "d2d1d91c-1b76-4b60-af6c-f9c7f37e62db",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    " Ext.getCmp('HomePanel').show({type:'slideIn',direction:'right'});\r",
+                                    "Ext.getCmp('CardConfirmationPanel').hide();\r",
+                                    "Ext.getCmp('alertPanel').hide();"
+                                ]
+                            },
+                            "designerId": "ed21ea26-58e2-4a25-838d-2cc2098f2828"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

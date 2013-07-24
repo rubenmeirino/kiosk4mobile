@@ -1,0 +1,93 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mainCrl"
+    },
+    "designerId": "b0c3676b-daba-403e-b17c-05d937cf58a1",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onButtonRelease",
+                "implHandler": [
+                    "if(!Ext.getCmp('conformationPanel')){Ext.Viewport.add({xtype: 'conformationPanel'});}\r",
+                    "Ext.getCmp('conformationPanel').show({type:'popIn',direction:'left'});\r",
+                    "if(button.config.no==1){\r",
+                    "    data={Name:\"Replica Home\",amount:'$50',img:\"img/Dallas_3.jpg\"};\r",
+                    "}else if(button.config.no==2){\r",
+                    "    data={Name:\"Replica Away\",amount:'$60',img:\"img/Dallas_4.jpg\"};\r",
+                    "}else if(button.config.no==3){\r",
+                    "    data={Name:\"Premier Home\",amount:'$70',img:\"img/Dallas_2.jpg\"};\r",
+                    "}else if(button.config.no==4){\r",
+                    "    data={Name:\"Premier Away\",amount:'$80',img:\"img/Dallas_1.jpg\"};\r",
+                    "}\r",
+                    "Ext.getCmp('ItemInfo').setData(data);"
+                ],
+                "name": "release",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[cls=HomeBut]"
+            },
+            "designerId": "5c4f56f8-e410-4a29-b690-d190341c8eb6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onButtonRelease1",
+                "implHandler": [
+                    "if(!Ext.getCmp('CustomizePanel')){Ext.Viewport.add({xtype: 'CustomizePanel'});}\r",
+                    "Ext.getCmp('CustomizePanel').show({type:'slideIn',direction:'left'});\r",
+                    "Ext.getCmp('SizePanel').hide();\r",
+                    "Ext.getCmp('CustomizePanel').items.items[5].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                ],
+                "name": "release",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[cls=sizeBut]"
+            },
+            "designerId": "00f39ef2-8105-4181-ab0e-07c1df17c6d3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onButtonRelease2",
+                "implHandler": [
+                    "if(!Ext.getCmp('conformationPanel')){Ext.Viewport.add({xtype: 'conformationPanel'});}\r",
+                    "Ext.getCmp('conformationPanel').show({type:'popIn',direction:'left'});\r",
+                    "if(button.config.no==1){\r",
+                    "    data={Name:\"Replica Home\",amount:'$50',img:\"img/Dallas_3.jpg\"};\r",
+                    "}else if(button.config.no==2){\r",
+                    "    data={Name:\"Replica Away\",amount:'$60',img:\"img/Dallas_4.jpg\"};\r",
+                    "}else if(button.config.no==3){\r",
+                    "    data={Name:\"Premier Home\",amount:'$70',img:\"img/Dallas_2.jpg\"};\r",
+                    "}else if(button.config.no==4){\r",
+                    "    data={Name:\"Premier Away\",amount:'$80',img:\"img/Dallas_1.jpg\"};\r",
+                    "}\r",
+                    "Ext.getCmp('ItemInfo').setData(data);"
+                ],
+                "name": "release",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[cls=HomeCls]"
+            },
+            "designerId": "65590e16-ac64-47a3-a843-8e955e8cb9d4"
+        }
+    ]
+}

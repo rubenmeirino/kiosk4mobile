@@ -1,0 +1,146 @@
+{
+    "name": "Kiosk4",
+    "settings": {},
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "2119b713-9d6a-4f5b-baf1-b936937925ef": {
+            "paths": [
+                "metadata/view/NameAndNumber",
+                "app/view/override/NameAndNumber.js",
+                "app/view/NameAndNumber.js"
+            ],
+            "className": "NameAndNumber"
+        },
+        "56cfde92-0443-4811-ba0e-47ea6a079760": {
+            "paths": [
+                "metadata/view/SizePanel",
+                "app/view/override/SizePanel.js",
+                "app/view/SizePanel.js"
+            ],
+            "className": "SizePanel"
+        },
+        "5bd8a658-b6e8-402f-81a9-9469d901ee74": {
+            "paths": [
+                "metadata/view/CustomizePanel",
+                "app/view/override/CustomizePanel.js",
+                "app/view/CustomizePanel.js"
+            ],
+            "className": "CustomizePanel"
+        },
+        "058ea19c-751e-457d-a755-ad5234760bdd": {
+            "paths": [
+                "metadata/view/RosterPanel",
+                "app/view/override/RosterPanel.js",
+                "app/view/RosterPanel.js"
+            ],
+            "className": "RosterPanel"
+        },
+        "f8fc2a1b-654b-4323-ada9-23dab3de5807": {
+            "paths": [
+                "metadata/view/CheckOutPanel",
+                "app/view/override/CheckOutPanel.js",
+                "app/view/CheckOutPanel.js"
+            ],
+            "className": "CheckOutPanel"
+        },
+        "3e0cf4ed-fdfe-4a90-b1d3-35108fe61db8": {
+            "paths": [
+                "metadata/view/CardInfoPanel",
+                "app/view/override/CardInfoPanel.js",
+                "app/view/CardInfoPanel.js"
+            ],
+            "className": "CardInfoPanel"
+        },
+        "26dc1851-de1d-40d4-8199-2da904d66d61": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "b0c3676b-daba-403e-b17c-05d937cf58a1": {
+            "paths": [
+                "metadata/controller/mainCrl",
+                "app/controller/override/mainCrl.js",
+                "app/controller/mainCrl.js"
+            ],
+            "className": "mainCrl"
+        },
+        "ac92e246-234d-40ef-ab47-a077e8ae7b26": {
+            "paths": [
+                "metadata/view/HomePanel",
+                "app/view/override/HomePanel.js",
+                "app/view/HomePanel.js"
+            ],
+            "className": "HomePanel"
+        },
+        "f1bff7c3-5af9-473d-8f1d-877bb40a1c20": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "9d21eac1-a0fb-46cc-9cc6-e3333b92cc5d": {
+            "paths": [
+                "metadata/view/conformationPanel",
+                "app/view/override/conformationPanel.js",
+                "app/view/conformationPanel.js"
+            ],
+            "className": "conformationPanel"
+        },
+        "110063a5-125b-4e8d-8b64-48453e4b7c0a": {
+            "paths": [
+                "metadata/view/CardConfirmationPanel",
+                "app/view/override/CardConfirmationPanel.js",
+                "app/view/CardConfirmationPanel.js"
+            ],
+            "className": "CardConfirmationPanel"
+        },
+        "ba0ed2cc-1aa1-465f-9efc-a04b5ff537aa": {
+            "paths": [
+                "metadata/view/Spalshscreen",
+                "app/view/override/Spalshscreen.js",
+                "app/view/Spalshscreen.js"
+            ],
+            "className": "Spalshscreen"
+        },
+        "bb54680e-6f44-4855-8c5f-b230d8add7b7": {
+            "paths": [
+                "metadata/view/alertPanel",
+                "app/view/override/alertPanel.js",
+                "app/view/alertPanel.js"
+            ],
+            "className": "alertPanel"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "56cfde92-0443-4811-ba0e-47ea6a079760",
+            "5bd8a658-b6e8-402f-81a9-9469d901ee74",
+            "058ea19c-751e-457d-a755-ad5234760bdd",
+            "2119b713-9d6a-4f5b-baf1-b936937925ef",
+            "f8fc2a1b-654b-4323-ada9-23dab3de5807",
+            "3e0cf4ed-fdfe-4a90-b1d3-35108fe61db8",
+            "ac92e246-234d-40ef-ab47-a077e8ae7b26",
+            "9d21eac1-a0fb-46cc-9cc6-e3333b92cc5d",
+            "110063a5-125b-4e8d-8b64-48453e4b7c0a",
+            "ba0ed2cc-1aa1-465f-9efc-a04b5ff537aa",
+            "bb54680e-6f44-4855-8c5f-b230d8add7b7"
+        ],
+        "store": [],
+        "controller": [
+            "b0c3676b-daba-403e-b17c-05d937cf58a1"
+        ],
+        "model": [],
+        "resource": [
+            "26dc1851-de1d-40d4-8199-2da904d66d61",
+            "f1bff7c3-5af9-473d-8f1d-877bb40a1c20"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

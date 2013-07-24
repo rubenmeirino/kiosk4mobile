@@ -1,0 +1,374 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "center",
+        "id": "HomePanel",
+        "itemId": "HomePanel",
+        "designer|userClassName": "HomePanel",
+        "designer|userAlias": "HomePanel",
+        "layout": "vbox",
+        "scrollable": false
+    },
+    "designerId": "ac92e246-234d-40ef-ab47-a077e8ae7b26",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "margin": "10 0 0 0 ",
+                "layout": "hbox"
+            },
+            "designerId": "bacada05-efd0-47d6-860c-ba347c0ffb1e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "no": "1",
+                        "border": 0,
+                        "cls": [
+                            "HomeBut"
+                        ],
+                        "height": 100,
+                        "html": "<img src=\"img/Dallas_3.jpg\" height=\"100\" />",
+                        "padding": 0,
+                        "style": null,
+                        "width": 130,
+                        "icon": "",
+                        "text": null
+                    },
+                    "designerId": "42a86960-0e6b-48a4-9028-c8830f0b1ac7",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "no",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 10
+                    },
+                    "designerId": "25e46d75-29e6-471d-943b-7a42213d9dd8"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "no": "2",
+                        "border": 0,
+                        "cls": [
+                            "HomeBut"
+                        ],
+                        "height": 100,
+                        "html": "<img src=\"img/Dallas_4.jpg\" height=\"100\" />",
+                        "padding": 0,
+                        "style": null,
+                        "width": 130,
+                        "iconCls": null,
+                        "text": null
+                    },
+                    "designerId": "c2a102b0-db01-46d7-aa63-c55029612679",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "no",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "hbox"
+            },
+            "designerId": "783c2525-482b-4cec-955e-5d3d4500faba",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "no": "1",
+                        "cls": [
+                            "HomeCls"
+                        ],
+                        "ui": "confirm",
+                        "width": 130,
+                        "text": "Replica Home"
+                    },
+                    "designerId": "b3226786-f387-484c-a87a-b496feedb4f8",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "no",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 10
+                    },
+                    "designerId": "e4804c2f-39bc-4bb6-bdfc-b5dee0fae352"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "no": "2",
+                        "cls": [
+                            "HomeCls"
+                        ],
+                        "ui": "confirm",
+                        "width": 130,
+                        "text": "Replica Away"
+                    },
+                    "designerId": "01b93da4-1788-4eb8-a75d-a8d7248bb085",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "no",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "margin": "10 0 0 0",
+                "layout": "hbox"
+            },
+            "designerId": "53213964-fa19-427c-b684-e75e1a55ee92",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "no": "3",
+                        "border": 0,
+                        "cls": [
+                            "HomeBut"
+                        ],
+                        "height": 100,
+                        "html": "<img src=\"img/Dallas_2.jpg\" height=\"100\" />",
+                        "padding": 0,
+                        "style": null,
+                        "width": 130,
+                        "text": null
+                    },
+                    "designerId": "064406af-e2ed-4601-96cf-3708c2a11fc3",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "no",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 10
+                    },
+                    "designerId": "942f6dfe-3095-44e0-bed6-576488350c46"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "no": "4",
+                        "border": 0,
+                        "cls": [
+                            "HomeBut"
+                        ],
+                        "height": 100,
+                        "html": "<img src=\"img/Dallas_1.jpg\" height=\"100\" />",
+                        "padding": 0,
+                        "style": null,
+                        "width": 130,
+                        "text": null
+                    },
+                    "designerId": "10354946-2bd2-41f2-b93c-3a357f8fefe5",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "no",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "hbox"
+            },
+            "designerId": "6beb381f-58ed-4d4f-963e-e0c1085d0440",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "no": "3",
+                        "cls": [
+                            "HomeCls"
+                        ],
+                        "ui": "confirm",
+                        "width": 130,
+                        "text": "Premier Home"
+                    },
+                    "designerId": "90d5e255-e90e-4a13-91f8-2ba15d6cde6f",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "no",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 10
+                    },
+                    "designerId": "4def4d02-9d3d-41df-8442-f9970ca06562"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "no": "4",
+                        "cls": [
+                            "HomeCls"
+                        ],
+                        "ui": "confirm",
+                        "width": 130,
+                        "text": "Premier Away"
+                    },
+                    "designerId": "f55f87a5-c7ee-4103-8a49-d1b3d5aa6448",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "no",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Choose  Jersey"
+            },
+            "designerId": "7caf1f47-607e-4522-a40b-b165d1cfc83e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "html": "<img src=\"img/Logo.png\" />",
+                        "padding": 0,
+                        "text": null
+                    },
+                    "designerId": "03e9e688-28b3-494b-934f-9fdbf02ae7c6"
+                }
+            ]
+        }
+    ]
+}

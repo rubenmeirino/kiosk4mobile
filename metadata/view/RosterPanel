@@ -1,0 +1,158 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[{ title: 'Jethro Bodine - 23' },{ title: 'Erik Cole - 45' },{ title: 'Cody Eakin - 41' },{ title: 'Vernon Fiddler - 45' },\r",
+            "  { title: 'Ryan Garbutt - 41' },{ title: 'Shawn Horcoff - 45' },{ title: 'Lane MacDermid - 41' },{ title: 'Rich Peverley - 45' },\r",
+            "  { title: 'Antoine Roussel - 41' },{ title: 'Tyler Seguin - 41' },{ title: 'Tom Wandell - 41' },\r",
+            " { title: 'Ray Whitney - 41' },{ title: 'Antoine Roussel - 41' }]"
+        ],
+        "id": "RosterPanel",
+        "itemId": "RosterPanel",
+        "designer|userClassName": "RosterPanel",
+        "designer|userAlias": "RosterPanel"
+    },
+    "configAlternates": {
+        "data": "array"
+    },
+    "designerId": "058ea19c-751e-457d-a755-ad5234760bdd",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "data",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Choose from Roster"
+            },
+            "designerId": "44b77f56-e678-4d59-a13d-a0592a641798",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "f3ff0108-30a3-4683-9503-cc64eea42aba",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "if(!Ext.getCmp('CustomizePanel')){Ext.Viewport.add({xtype: 'CustomizePanel'});}\r",
+                                    "Ext.getCmp('CustomizePanel').show({type:'slideIn',direction:'right'});\r",
+                                    "Ext.getCmp('RosterPanel').hide();"
+                                ]
+                            },
+                            "designerId": "da062bd5-d682-47b3-b49c-0ff0e33e05e0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "56308052-bcc9-4be6-b22c-e707c860cca7"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "html": "<img src=\"img/Logo.png\" />",
+                        "padding": 0,
+                        "text": null
+                    },
+                    "designerId": "eeee2187-f385-4d7a-aad7-4d61de4b2741"
+                }
+            ]
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div align=\"center\">{title}</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "1bae4579-0ba2-449f-9c79-adfc3daff513"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onRosterPanelItemTap",
+                "implHandler": [
+                    "Kiosk4.app.oldPage='RosterPanel';\r",
+                    "if(!Ext.getCmp('CheckOutPanel')){Ext.Viewport.add({xtype: 'CheckOutPanel'});}\r",
+                    "Ext.getCmp('CheckOutPanel').show({type:'slideIn',direction:'left'});\r",
+                    "Ext.getCmp('RosterPanel').hide();\r",
+                    "var title=record.data.title;var temp=title.split('-');\r",
+                    "Kiosk4.app.jerseyNumber=temp[1];\r",
+                    "Kiosk4.app.jerseyName=temp[0];\r",
+                    "Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "2d4fb49a-50dd-43c2-aece-589e12a75b88"
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "designerId": "2e705cc0-77fc-48b9-bac5-170aaa804691"
+        }
+    ]
+}

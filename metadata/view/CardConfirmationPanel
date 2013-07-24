@@ -1,0 +1,299 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "CardConfirmationPanel",
+        "width": null,
+        "designer|userClassName": "CardConfirmationPanel",
+        "designer|userAlias": "CardConfirmationPanel"
+    },
+    "designerId": "110063a5-125b-4e8d-8b64-48453e4b7c0a",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Complete Order"
+            },
+            "designerId": "b560ef6b-c4d0-4ab2-aecc-2a1d641a3d80",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "0f76cc37-7431-4b4e-8575-a49482bbcb99",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp('CardInfoPanel').show({type:'slideIn',direction:'right'});\r",
+                                    "Ext.getCmp('CardConfirmationPanel').hide();"
+                                ]
+                            },
+                            "designerId": "b13b0c7f-1bbb-4897-8df8-3e43d33ba50b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "a9d9d0af-d83d-4f2a-822e-51f30f574819"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "html": "<img src=\"img/Logo.png\" />",
+                        "padding": 0,
+                        "text": null
+                    },
+                    "designerId": "bb33467c-d946-4918-9043-36126fd98439"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "PRODUCTINFO",
+                "itemId": "PRODUCTINFO",
+                "width": null,
+                "title": null
+            },
+            "designerId": "d5861347-1cf8-412a-b9ec-5bd495c3bcae",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Jersey Size:",
+                        "labelWidth": "40%",
+                        "name": "jerseySize",
+                        "readOnly": true
+                    },
+                    "designerId": "19f753c7-459c-4bf7-90ef-dfe3360972ba"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": null,
+                        "label": "Product Price:",
+                        "labelWidth": "40%",
+                        "name": "productPrice",
+                        "readOnly": true
+                    },
+                    "designerId": "81d428f8-7a6c-4ba9-8ebd-2de29e3f0298"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Jersey Name: ",
+                        "labelWidth": "40%",
+                        "name": "jerseyName",
+                        "readOnly": true
+                    },
+                    "designerId": "08bef773-fad9-4a70-9504-ac066769cd77"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Jersey Number: ",
+                        "labelWidth": "40%",
+                        "name": "jerseyNumber",
+                        "readOnly": true
+                    },
+                    "designerId": "8c6a0dd7-402e-4d0a-9979-e9d585882b6e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "CUSTOMERINFO",
+                "itemId": "CUSTOMERINFO",
+                "title": null
+            },
+            "designerId": "5035f6c3-02f4-4f2a-b70c-1f62f0cb8c91",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Name: ",
+                        "labelWidth": "40%",
+                        "name": "CurName",
+                        "readOnly": true
+                    },
+                    "designerId": "44fb0efd-0a32-46e9-8d6c-3cc7d2f83b7f"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Address:",
+                        "labelWidth": "40%",
+                        "name": "CurAddress",
+                        "readOnly": true
+                    },
+                    "designerId": "32245171-fe19-46dc-abd9-a1afc60e6245"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "City:",
+                        "labelWidth": "40%",
+                        "name": "CurCity",
+                        "readOnly": true
+                    },
+                    "designerId": "775229ec-c89e-406d-81d3-82ef5cbd1837"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "State:",
+                        "labelWidth": "40%",
+                        "name": "CurState",
+                        "readOnly": true
+                    },
+                    "designerId": "faf767f5-4637-4049-8bcb-cac1af01c785"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Zip code:",
+                        "labelWidth": "40%",
+                        "name": "CurZip",
+                        "readOnly": true
+                    },
+                    "designerId": "1bcaad54-e485-4ab2-9902-45a22ff4dbcc"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ui": "confirm",
+                "text": "Submit"
+            },
+            "designerId": "cb3f436e-0824-41b0-9c4f-197e70933de1",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "if(!Ext.getCmp('alertPanel')){Ext.Viewport.add({xtype: 'alertPanel'});}\r",
+                            "Ext.getCmp('alertPanel').show({type:'popIn'});\r",
+                            "/*Ext.Msg.alert('','<div>Thank you Your Order has been processed! Go All Stars!<div>',function(){\r",
+                            "    Ext.getCmp('HomePanel').show({type:'slideIn',direction:'right'});\r",
+                            "    Ext.getCmp('CardConfirmationPanel').hide();\r",
+                            "});*/"
+                        ]
+                    },
+                    "designerId": "7313876e-ea97-45d6-a064-d85ff50344bc"
+                }
+            ]
+        }
+    ]
+}

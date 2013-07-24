@@ -1,0 +1,45 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": [
+            "NameAndNumber",
+            "SizePanel",
+            "CustomizePanel",
+            "RosterPanel",
+            "CheckOutPanel",
+            "CardInfoPanel",
+            "HomePanel",
+            "conformationPanel",
+            "CardConfirmationPanel",
+            "Spalshscreen",
+            "alertPanel"
+        ],
+        "controllers": [
+            "mainCrl"
+        ],
+        "name": "Kiosk4"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "9a083c0d-ba97-4b87-801b-98b48ccfc8f4"
+        }
+    ]
+}

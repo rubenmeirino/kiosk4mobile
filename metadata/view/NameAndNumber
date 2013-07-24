@@ -1,0 +1,196 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "NameAndNumber",
+        "itemId": "NameAndNumber",
+        "designer|userClassName": "NameAndNumber",
+        "designer|userAlias": "NameAndNumber"
+    },
+    "designerId": "2119b713-9d6a-4f5b-baf1-b936937925ef",
+    "cn": [
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 30
+            },
+            "designerId": "774393d1-d1b8-48f9-a779-cc1a667330e2"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": null
+            },
+            "designerId": "efb5598b-4432-4dfa-bd09-8bf9ccad9121",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": null,
+                        "maxLength": 10,
+                        "placeHolder": "Name"
+                    },
+                    "designerId": "505c1c23-c730-4bbd-a814-0a9044b7259b"
+                },
+                {
+                    "type": "Ext.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": null,
+                        "placeHolder": "Number"
+                    },
+                    "designerId": "3aacd704-2903-4ee9-8b9b-5b9f148d0598"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Custom name/Number"
+            },
+            "designerId": "bb1b0474-4897-4460-904b-67ea8f3554f1",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "d04c02dc-5fa0-478a-ab61-ecb6c0c8fd7c",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp('CustomizePanel').show({type:'slideIn',direction:'right'});\r",
+                                    "Ext.getCmp('NameAndNumber').hide();"
+                                ]
+                            },
+                            "designerId": "dd8733d1-3063-4e24-9749-655cfa2b8e38"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "ec611d0b-3fb9-4bfc-af2c-b5f7e075f3d7"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "html": "<img src=\"img/Logo.png\" />",
+                        "padding": 0,
+                        "text": null
+                    },
+                    "designerId": "1d5910f8-05ed-4b7e-a3b5-8849b28c07d0"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ui": "confirm",
+                "text": "CheckOut"
+            },
+            "designerId": "457ea010-cf8f-46ed-93b1-1445055f6d11",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "Kiosk4.app.oldPage='NameOrNumber';\r",
+                            "if(!Ext.getCmp('CheckOutPanel')){Ext.Viewport.add({xtype: 'CheckOutPanel'});}\r",
+                            "Ext.getCmp('CheckOutPanel').show({type:'slideIn',direction:'left'});\r",
+                            "Ext.getCmp('NameAndNumber').hide();\r",
+                            "Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue();\r",
+                            "Kiosk4.app.jerseyName=Ext.getCmp('NameAndNumber').items.items[1].items.items[0].getValue();\r",
+                            "Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                        ]
+                    },
+                    "designerId": "d1295b1f-72bc-4542-82df-6d9ba9abfa97"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "designerId": "c9414517-a2f6-4bfb-9354-176dfce22457"
+        }
+    ]
+}

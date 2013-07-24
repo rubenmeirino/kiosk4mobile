@@ -1,0 +1,183 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "height": 350,
+        "id": "conformationPanel",
+        "itemId": "conformationPanel",
+        "width": "80%",
+        "designer|userClassName": "conformationPanel",
+        "designer|userAlias": "conformationPanel",
+        "modal": true,
+        "scrollable": false
+    },
+    "designerId": "9d21eac1-a0fb-46cc-9cc6-e3333b92cc5d",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "confTool"
+                ],
+                "docked": "top",
+                "html": null,
+                "style": null,
+                "title": "Confirmation"
+            },
+            "designerId": "fc8b4698-4536-448a-93e3-9baedcbb0b18"
+        },
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "ItemInfo",
+                "itemId": "ItemInfo"
+            },
+            "designerId": "91e0cb4d-56ee-49ab-9996-a6c8925aa0b7",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div align=\"center\">{Name}<br/>{amount}</br><img src=\"{img}\" height=\"100px\"  /><br/>Order home {Name} Jersey? </div>"
+                        ],
+                        "designer|displayName": "tpl"
+                    },
+                    "designerId": "c352b1f1-b984-45ee-a815-3b61457fd14f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 20
+            },
+            "designerId": "fb238ad5-8361-46cb-b2da-ab442cb4907c"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "layout": "hbox"
+            },
+            "designerId": "be451f44-4d73-499c-a18f-5c710c6b213f",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "ui": "confirm",
+                        "width": 60,
+                        "text": "Yes"
+                    },
+                    "designerId": "3b2495d1-3845-4f0a-82ea-af60dee2ba58",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "if(!Ext.getCmp('SizePanel')){Ext.Viewport.add({xtype: 'SizePanel'});}\r",
+                                    "Ext.getCmp('SizePanel').show({type:'slideIn',direction:'left'});\r",
+                                    "Ext.getCmp('HomePanel').hide();\r",
+                                    "Ext.getCmp('conformationPanel').hide();\r",
+                                    "Ext.getCmp('SizePanel').items.items[3].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                                ]
+                            },
+                            "designerId": "70353bee-fd23-46a2-8883-d348c50dcb46"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 20
+                    },
+                    "designerId": "62c2b262-faaa-4482-a98e-12a486f6625d"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "ui": "decline",
+                        "width": 60,
+                        "text": "No"
+                    },
+                    "designerId": "5e89592c-f3fe-40cf-ac42-30e39f5fe86d",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp('conformationPanel').hide();"
+                                ]
+                            },
+                            "designerId": "7be767d7-12a4-47f6-98ab-1d4c32753298"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

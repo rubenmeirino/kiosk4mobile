@@ -1,0 +1,201 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "CustomizePanel",
+        "itemId": "CustomizePanel",
+        "designer|userClassName": "CustomizePanel",
+        "designer|userAlias": "CustomizePanel"
+    },
+    "designerId": "5bd8a658-b6e8-402f-81a9-9469d901ee74",
+    "cn": [
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 30
+            },
+            "designerId": "0a3480d4-f0a4-4b60-b658-263a87c8786a"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ui": "confirm",
+                "text": "Custom name and number"
+            },
+            "designerId": "ad96c0e2-c936-4f74-8728-a91d44cde422",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "if(!Ext.getCmp('NameAndNumber')){Ext.Viewport.add({xtype: 'NameAndNumber'});}\r",
+                            "Ext.getCmp('NameAndNumber').show({type:'slideIn',direction:'left'});\r",
+                            "Ext.getCmp('CustomizePanel').hide();\r",
+                            "Ext.getCmp('NameAndNumber').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                        ]
+                    },
+                    "designerId": "dbbd749a-8c7a-4781-af4a-0423e81d0561"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 30
+            },
+            "designerId": "9d5963e1-56b5-4494-8be2-ae00ae0cfdca"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ui": "confirm",
+                "text": "Choose from team roster"
+            },
+            "designerId": "8d0be777-dc5d-4622-a273-6e3bf36dfaea",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "if(!Ext.getCmp('RosterPanel')){Ext.Viewport.add({xtype: 'RosterPanel'});}\r",
+                            "Ext.getCmp('RosterPanel').show({type:'slideIn',direction:'left'});\r",
+                            "Ext.getCmp('CustomizePanel').hide();\r",
+                            "Ext.getCmp('RosterPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                        ]
+                    },
+                    "designerId": "bb7a1668-ca83-4112-b63c-970830c79769"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Customize Options"
+            },
+            "designerId": "ecbb720f-a987-4b68-9c60-fa4b7d6635c7",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "d0ab1936-5a3f-4667-91cd-4e83eba40e25",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp('SizePanel').show({type:'slideIn',direction:'right'});\r",
+                                    "Ext.getCmp('CustomizePanel').hide();"
+                                ]
+                            },
+                            "designerId": "9a655b15-6695-44d2-b7ae-485998f1b762"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "872e4524-93bb-457a-bc57-91e2ceaa12c8"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "html": "<img src=\"img/Logo.png\" />",
+                        "padding": 0,
+                        "text": null
+                    },
+                    "designerId": "9cd58414-e988-46ba-93ae-f553ce68d660"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "designerId": "dc274c4d-450c-411e-ac11-47f27ee11ad2"
+        }
+    ]
+}
