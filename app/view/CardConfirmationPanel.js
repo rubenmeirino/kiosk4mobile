@@ -110,6 +110,20 @@ Ext.define('Kiosk4.view.CardConfirmationPanel', {
                         labelWidth: '40%',
                         name: 'CurZip',
                         readOnly: true
+                    },
+                    {
+                        xtype: 'textfield',
+                        label: 'Email',
+                        labelWidth: '40%',
+                        name: 'Email',
+                        readOnly: true
+                    },
+                    {
+                        xtype: 'textfield',
+                        label: 'Phone',
+                        labelWidth: '40%',
+                        name: 'Phone',
+                        readOnly: true
                     }
                 ]
             },

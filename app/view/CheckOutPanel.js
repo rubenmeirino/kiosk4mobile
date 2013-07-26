@@ -56,6 +56,18 @@ Ext.define('Kiosk4.view.CheckOutPanel', {
                         label: 'Zip code',
                         labelWidth: '40%',
                         placeHolder: 'Required'
+                    },
+                    {
+                        xtype: 'emailfield',
+                        label: 'Email',
+                        labelWidth: '40%',
+                        placeHolder: 'email@example.com'
+                    },
+                    {
+                        xtype: 'numberfield',
+                        label: 'Phone',
+                        labelWidth: '40%',
+                        placeHolder: 'Required'
                     }
                 ]
             },

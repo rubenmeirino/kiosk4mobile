@@ -229,6 +229,36 @@
                         "readOnly": true
                     },
                     "designerId": "1bcaad54-e485-4ab2-9902-45a22ff4dbcc"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Email",
+                        "labelWidth": "40%",
+                        "name": "Email",
+                        "readOnly": true
+                    },
+                    "designerId": "e25c3742-2b55-4aaa-86d7-6be4878b0847"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Phone",
+                        "labelWidth": "40%",
+                        "name": "Phone",
+                        "readOnly": true
+                    },
+                    "designerId": "582cc0fc-a4f2-4454-9a15-996a95cfc2b6"
                 }
             ]
         },
@@ -337,7 +367,7 @@
                             "};\r",
                             "Ext.getCmp('CardConfirmationPanel').mask({\r",
                             "    message:'Please wait, processing order...',\r",
-                            "    xtype: 'loadmask'});\r",
+                            "xtype: 'loadmask'});\r",
                             "Test.request(\r",
                             "Test.getUrl('Kiosk/Order/Create', { simulateTerminal: true }),\r",
                             "params,\r",

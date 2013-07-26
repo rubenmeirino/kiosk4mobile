@@ -103,6 +103,34 @@
                         "placeHolder": "Required"
                     },
                     "designerId": "f87270f9-7c84-4d0c-9d9e-65fd759e0c85"
+                },
+                {
+                    "type": "Ext.field.Email",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Email",
+                        "labelWidth": "40%",
+                        "placeHolder": "email@example.com"
+                    },
+                    "designerId": "6a33d775-8a37-48e7-b3b2-216f0035878d"
+                },
+                {
+                    "type": "Ext.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Phone",
+                        "labelWidth": "40%",
+                        "placeHolder": "Required"
+                    },
+                    "designerId": "04584168-8d1b-4bd8-a1f6-7c55f2b7ad5d"
                 }
             ]
         },

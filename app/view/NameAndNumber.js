@@ -70,11 +70,11 @@ Ext.define('Kiosk4.view.NameAndNumber', {
                     Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);
                     Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue()+"";
                     Kiosk4.app.jerseyName=Ext.getCmp('NameAndNumber').items.items[1].items.items[0].getValue();
-
+                    /*
                     Ext.getCmp('CustomizeFormPanel').setValues({
-                        name:Kiosk4.app.jerseyName,
-                        number:Kiosk4.app.jerseyNumber
-                    });
+                    name:Kiosk4.app.jerseyName,
+                    number:Kiosk4.app.jerseyNumber
+                    });*/
                 },
                 ui: 'confirm',
                 text: 'CheckOut'

@@ -14,12 +14,13 @@
  */
 
 Ext.define('Kiosk4.view.CustomizeFormPanel', {
-    extend: 'Ext.form.Panel',
+    extend: 'Ext.Panel',
     alias: 'widget.CustomizeFormPanel',
 
     config: {
         id: 'CustomizeFormPanel',
         itemId: 'CustomizeFormPanel',
+        scrollable: true,
         items: [
             {
                 xtype: 'toolbar',
@@ -50,23 +51,6 @@ Ext.define('Kiosk4.view.CustomizeFormPanel', {
                 docked: 'bottom'
             },
             {
-                xtype: 'fieldset',
-                items: [
-                    {
-                        xtype: 'textfield',
-                        label: 'Name',
-                        name: 'name',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
-                        label: 'Number',
-                        name: 'number',
-                        readOnly: true
-                    }
-                ]
-            },
-            {
                 xtype: 'panel',
                 html: '<div id="canvas_container"></div>',
                 itemId: 'myfieldset8',
@@ -80,6 +64,7 @@ Ext.define('Kiosk4.view.CustomizeFormPanel', {
                     Ext.getCmp('CustomizeFormPanel').hide();
                     Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name);
                 },
+                margin: '0 10 0 10',
                 ui: 'confirm',
                 text: 'Check Out'
             }
@@ -97,7 +82,7 @@ Ext.define('Kiosk4.view.CustomizeFormPanel', {
             drawTShirt(Kiosk4.app.jerseyName, Kiosk4.app.jerseyNumber);
         });
 
-        task.delay(200);
+        task.delay(500);
 
         Ext.getCmp('CustomizeFormPanel').mask({
             message:'Please wait...',

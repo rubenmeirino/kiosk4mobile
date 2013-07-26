@@ -1,5 +1,5 @@
 {
-    "type": "Ext.form.Panel",
+    "type": "Ext.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,7 +9,8 @@
         "id": "CustomizeFormPanel",
         "itemId": "CustomizeFormPanel",
         "designer|userClassName": "CustomizeFormPanel",
-        "designer|userAlias": "CustomizeFormPanel"
+        "designer|userAlias": "CustomizeFormPanel",
+        "scrollable": true
     },
     "designerId": "e5297c8c-c9b6-4eed-b0a1-2d02278edb55",
     "cn": [
@@ -84,48 +85,6 @@
             "designerId": "9dff947f-1ac0-473f-acbb-15e6c386f0c4"
         },
         {
-            "type": "Ext.form.FieldSet",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "title": null
-            },
-            "designerId": "2c7cb53c-292f-4da3-87d5-3dd7a3a6c54a",
-            "cn": [
-                {
-                    "type": "Ext.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Name",
-                        "name": "name",
-                        "readOnly": true
-                    },
-                    "designerId": "21f77905-34b4-46b5-9c01-d046b1353a53"
-                },
-                {
-                    "type": "Ext.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Number",
-                        "name": "number",
-                        "readOnly": true
-                    },
-                    "designerId": "e69bb9cd-0c64-4c00-9b3a-35e523284d15"
-                }
-            ]
-        },
-        {
             "type": "Ext.Panel",
             "reference": {
                 "name": "items",
@@ -148,6 +107,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "margin": "0 10 0 10",
                 "ui": "confirm",
                 "text": "Check Out"
             },
@@ -191,11 +151,11 @@
                     "    drawTShirt(Kiosk4.app.jerseyName, Kiosk4.app.jerseyNumber);\r",
                     "});\r",
                     "\r",
-                    "task.delay(200);\r",
+                    "task.delay(500);\r",
                     "\r",
                     "Ext.getCmp('CustomizeFormPanel').mask({\r",
                     "    message:'Please wait...',\r",
-                    "    xtype: 'loadmask'});"
+                    "xtype: 'loadmask'});"
                 ],
                 "name": "show"
             },

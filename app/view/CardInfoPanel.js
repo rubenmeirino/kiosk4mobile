@@ -88,7 +88,9 @@ Ext.define('Kiosk4.view.CardInfoPanel', {
                         CurAddress:Ext.getCmp('CheckOutPanel').items.items[1].items.items[1].getValue(),
                         CurCity:Ext.getCmp('CheckOutPanel').items.items[1].items.items[2].getValue(),
                         CurState:Ext.getCmp('CheckOutPanel').items.items[1].items.items[3].getValue(),
-                        CurZip:Ext.getCmp('CheckOutPanel').items.items[1].items.items[4].getValue()
+                        CurZip:Ext.getCmp('CheckOutPanel').items.items[1].items.items[4].getValue(),
+                        Email:Ext.getCmp('CheckOutPanel').items.items[1].items.items[5].getValue(),
+                        Phone:Ext.getCmp('CheckOutPanel').items.items[1].items.items[6].getValue()
                     };
                     Ext.getCmp('CardConfirmationPanel').setValues(Data);
                 },

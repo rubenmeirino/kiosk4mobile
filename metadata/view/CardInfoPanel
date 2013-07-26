@@ -174,7 +174,9 @@
                             "    CurAddress:Ext.getCmp('CheckOutPanel').items.items[1].items.items[1].getValue(),\r",
                             "    CurCity:Ext.getCmp('CheckOutPanel').items.items[1].items.items[2].getValue(),\r",
                             "    CurState:Ext.getCmp('CheckOutPanel').items.items[1].items.items[3].getValue(),\r",
-                            "    CurZip:Ext.getCmp('CheckOutPanel').items.items[1].items.items[4].getValue()\r",
+                            "    CurZip:Ext.getCmp('CheckOutPanel').items.items[1].items.items[4].getValue(),\r",
+                            "    Email:Ext.getCmp('CheckOutPanel').items.items[1].items.items[5].getValue(),\r",
+                            "    Phone:Ext.getCmp('CheckOutPanel').items.items[1].items.items[6].getValue()\r",
                             "};\r",
                             "Ext.getCmp('CardConfirmationPanel').setValues(Data);"
                         ]

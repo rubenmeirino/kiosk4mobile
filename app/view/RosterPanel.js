@@ -22,43 +22,67 @@ Ext.define('Kiosk4.view.RosterPanel', {
         itemId: 'RosterPanel',
         data: [
             {
-                title: 'Jethro Bodine - 23'
+                title: 'MACDERMID -28'
             },
             {
-                title: 'Erik Cole - 45'
+                title: 'EAKIN -20'
             },
             {
-                title: 'Cody Eakin - 41'
+                title: 'NILSTORP -41'
             },
             {
-                title: 'Vernon Fiddler - 45'
+                title: 'CHIASSON -12'
             },
             {
-                title: 'Ryan Garbutt - 41'
+                title: 'GOLIGOSKI -33'
             },
             {
-                title: 'Shawn Horcoff - 45'
+                title: 'WHITNEY WHITNEY FRASER -25'
             },
             {
-                title: 'Lane MacDermid - 41'
+                title: 'DAYLEY -6'
             },
             {
-                title: 'Rich Peverley - 45'
+                title: 'BENN -14'
             },
             {
-                title: 'Antoine Roussel - 41'
+                title: 'COLE -72'
             },
             {
-                title: 'Tyler Seguin - 41'
+                title: 'GARBUTT -40'
             },
             {
-                title: 'Tom Wandell - 41'
+                title: 'LEHTONEN -32'
             },
             {
-                title: 'Ray Whitney - 41'
+                title: 'LARSEN -36'
             },
             {
-                title: 'Antoine Roussel - 41'
+                title: 'ROUSSEL -60'
+            },
+            {
+                title: 'BACHMAN -31'
+            },
+            {
+                title: 'FIDDLER -38'
+            },
+            {
+                title: 'WANDELL -23'
+            },
+            {
+                title: 'ROBIDAS -3'
+            },
+            {
+                title: 'NYSTROM -24'
+            },
+            {
+                title: 'ERIKSSON -21'
+            },
+            {
+                title: 'DILLON -4'
+            },
+            {
+                title: 'ROME -27'
             }
         ],
         itemTpl: [
@@ -108,10 +132,10 @@ Ext.define('Kiosk4.view.RosterPanel', {
         Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'left'});
         Ext.getCmp('RosterPanel').hide();
         Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);
-        Ext.getCmp('CustomizeFormPanel').setValues({
-            name:Kiosk4.app.jerseyName,
-            number:Kiosk4.app.jerseyNumber
-        });
+        /*Ext.getCmp('CustomizeFormPanel').setValues({
+        name:Kiosk4.app.jerseyName,
+        number:Kiosk4.app.jerseyNumber
+        });*/
         //Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue();
         //Kiosk4.app.jerseyName=Ext.getCmp('NameAndNumber').items.items[1].items.items[0].getValue();
     }

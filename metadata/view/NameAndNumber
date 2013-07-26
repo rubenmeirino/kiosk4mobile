@@ -153,11 +153,11 @@
                             "Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);\r",
                             "Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue()+\"\";\r",
                             "Kiosk4.app.jerseyName=Ext.getCmp('NameAndNumber').items.items[1].items.items[0].getValue();\r",
-                            "\r",
+                            "/*\r",
                             "Ext.getCmp('CustomizeFormPanel').setValues({\r",
                             "    name:Kiosk4.app.jerseyName,\r",
                             "    number:Kiosk4.app.jerseyNumber\r",
-                            "});"
+                            "});*/"
                         ]
                     },
                     "designerId": "d1295b1f-72bc-4542-82df-6d9ba9abfa97"
