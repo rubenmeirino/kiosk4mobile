@@ -17,7 +17,8 @@
             "conformationPanel",
             "CardConfirmationPanel",
             "Spalshscreen",
-            "alertPanel"
+            "alertPanel",
+            "CustomizeFormPanel"
         ],
         "controllers": [
             "mainCrl"
@@ -40,6 +41,18 @@
                 ]
             },
             "designerId": "9a083c0d-ba97-4b87-801b-98b48ccfc8f4"
+        },
+        {
+            "type": "Ext.Viewport",
+            "reference": {
+                "name": "viewport",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoMaximize": true
+            },
+            "designerId": "8d5768b8-e7c6-487a-a4eb-f78b8fed4cb5"
         }
     ]
 }

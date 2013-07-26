@@ -21,11 +21,14 @@ Ext.define('Kiosk4.controller.mainCrl', {
             "button[cls=HomeBut]": {
                 release: 'onButtonRelease'
             },
-            "button[cls=sizeBut]": {
+            "button[cls=AdultsizeBut]": {
                 release: 'onButtonRelease1'
             },
             "button[cls=HomeCls]": {
                 release: 'onButtonRelease2'
+            },
+            "button[cls=YouthsizeBut]": {
+                release: 'onButtonRelease3'
             }
         }
     },
@@ -34,37 +37,38 @@ Ext.define('Kiosk4.controller.mainCrl', {
         if(!Ext.getCmp('conformationPanel')){Ext.Viewport.add({xtype: 'conformationPanel'});}
         Ext.getCmp('conformationPanel').show({type:'popIn',direction:'left'});
         if(button.config.no==1){
-            data={Name:"Replica Home",amount:'$50',img:"img/Dallas_3.jpg"};
+            data={Name:"Replica Home",amount:'$100.00 - $150.00',img:"img/Dallas_3.jpg"};
         }else if(button.config.no==2){
-            data={Name:"Replica Away",amount:'$60',img:"img/Dallas_4.jpg"};
-        }else if(button.config.no==3){
-            data={Name:"Premier Home",amount:'$70',img:"img/Dallas_2.jpg"};
-        }else if(button.config.no==4){
-            data={Name:"Premier Away",amount:'$80',img:"img/Dallas_1.jpg"};
+            data={Name:"Replica Away",amount:'$100.00 - $150.00',img:"img/Dallas_4.jpg"};
         }
         Ext.getCmp('ItemInfo').setData(data);
     },
 
     onButtonRelease1: function(button, e, eOpts) {
+        Kiosk4.app.size='$150';
         if(!Ext.getCmp('CustomizePanel')){Ext.Viewport.add({xtype: 'CustomizePanel'});}
         Ext.getCmp('CustomizePanel').show({type:'slideIn',direction:'left'});
         Ext.getCmp('SizePanel').hide();
-        Ext.getCmp('CustomizePanel').items.items[5].setTitle(Ext.getCmp('ItemInfo').getData().Name+"("+Ext.getCmp('ItemInfo').getData().amount+")");
+        Ext.getCmp('CustomizePanel').items.items[5].setTitle(Ext.getCmp('ItemInfo').getData().Name);
     },
 
     onButtonRelease2: function(button, e, eOpts) {
         if(!Ext.getCmp('conformationPanel')){Ext.Viewport.add({xtype: 'conformationPanel'});}
         Ext.getCmp('conformationPanel').show({type:'popIn',direction:'left'});
         if(button.config.no==1){
-            data={Name:"Replica Home",amount:'$50',img:"img/Dallas_3.jpg"};
+            data={Name:"Replica Home",amount:'$100.00 - $150.00',img:"img/img4.png"};
         }else if(button.config.no==2){
-            data={Name:"Replica Away",amount:'$60',img:"img/Dallas_4.jpg"};
-        }else if(button.config.no==3){
-            data={Name:"Premier Home",amount:'$70',img:"img/Dallas_2.jpg"};
-        }else if(button.config.no==4){
-            data={Name:"Premier Away",amount:'$80',img:"img/Dallas_1.jpg"};
-        }
+            data={Name:"Replica Away",amount:'$100.00 - $150.00',img:"img/img5.png"};
+        }	
         Ext.getCmp('ItemInfo').setData(data);
+    },
+
+    onButtonRelease3: function(button, e, eOpts) {
+        Kiosk4.app.size='$100';
+        if(!Ext.getCmp('CustomizePanel')){Ext.Viewport.add({xtype: 'CustomizePanel'});}
+        Ext.getCmp('CustomizePanel').show({type:'slideIn',direction:'left'});
+        Ext.getCmp('SizePanel').hide();
+        Ext.getCmp('CustomizePanel').items.items[5].setTitle(Ext.getCmp('ItemInfo').getData().Name);
     }
 
 });

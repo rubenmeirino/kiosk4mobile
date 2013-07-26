@@ -33,7 +33,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
+                        "label": "Card Type",
+                        "labelWidth": "40%",
                         "options": [
                             "[{text:'Visa'},{text:'Master Card'}]"
                         ]
@@ -48,8 +49,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
-                        "placeHolder": "card Number"
+                        "label": "card Number",
+                        "labelWidth": "40%",
+                        "placeHolder": "Required"
                     },
                     "designerId": "c52baac4-451a-4a47-8c6b-98c503cd0acf"
                 },
@@ -61,8 +63,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
-                        "placeHolder": "Expiration"
+                        "label": "Expiration",
+                        "labelWidth": "40%",
+                        "placeHolder": "Required"
                     },
                     "designerId": "7eb8c76a-6a20-4b25-9f0d-9363fc76e002"
                 },
@@ -74,8 +77,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
-                        "placeHolder": "CSV Code"
+                        "label": "CSV Code",
+                        "labelWidth": "40%",
+                        "placeHolder": "Required"
                     },
                     "designerId": "365c6596-1587-4eca-8c9d-833474f08ea7"
                 }
@@ -128,30 +132,6 @@
                             "designerId": "524ed64c-8a8c-4d8b-8024-ea425dc61b82"
                         }
                     ]
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "designerId": "67753b58-7728-4a6c-821d-0c2cf256e193"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null,
-                        "html": "<img src=\"img/Logo.png\" />",
-                        "padding": 0,
-                        "text": null
-                    },
-                    "designerId": "8c989223-bb20-4ba3-8fdf-c71f02632249"
                 }
             ]
         },
@@ -187,7 +167,7 @@
                             "Ext.getCmp('CardInfoPanel').hide();\r",
                             "var Data={\r",
                             "    jerseySize:Ext.getCmp('ItemInfo').getData().Name,\r",
-                            "    productPrice:Ext.getCmp('ItemInfo').getData().amount,\r",
+                            "    productPrice:Kiosk4.app.size,\r",
                             "    jerseyName:Kiosk4.app.jerseyName,\r",
                             "    jerseyNumber:Kiosk4.app.jerseyNumber,\r",
                             "    CurName:Ext.getCmp('CheckOutPanel').items.items[1].items.items[0].getValue(),\r",

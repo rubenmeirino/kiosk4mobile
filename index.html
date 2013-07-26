@@ -11,6 +11,75 @@
         Ext.theme = {
             name: "Default"
         };
+		
+		function addScript(url, handler){
+			var head= document.getElementsByTagName('head')[0];
+			var script= document.createElement('script');
+			script.type= 'text/javascript';
+			script.src= url;
+			if(handler){
+				script.onload = handler;				
+			}
+			head.appendChild(script);
+		}		
+		
+		function processCanvas(){
+
+			addScript("http://cadxcdn.blob.core.windows.net/canvas-2-0/head.js");
+			addScript("http://cadxcdn.blob.core.windows.net/canvas-2-0/Cadx.js", function(){				
+				Cadx.js( Cadx.Canvas( { base: 'http://cadxcdn.blob.core.windows.net/canvas-2-0' } ) );				
+			});
+
+		}
+		
+		function drawTShirt(jerseyName, jerseyNumber){ 
+
+			Cadx.Core.getSessionId2 = function () {
+				return '89a4a271-51cc-4997-806e-34b30c0c55c8';
+			}
+			
+			jQuery.support.cors = true;
+			//normally this are configured in the URL
+			Cadx.Net.SERVER = 'http://devapp.poweredbycadworx.com/';
+			//Cadx.Net.SESSION_PARAM_2 = '?sessionId=45f22658-87e3-4a3e-b8ac-4c044b947892&su=false'; //sid2=
+			
+			var node = document.getElementById("canvas_container");
+			while (node.hasChildNodes()) {
+				node.removeChild(node.lastChild);
+			}
+			
+			var view =  new Cadx.View.Document({
+			  plugins: [new Cadx.Plugin.SelectTool()],
+			  renderTo: "canvas_container"
+			});
+
+			//var docid = 'f43657a1-c83d-499a-ac44-6818d3290395';
+			var docid = Kiosk4.app.classId;	   
+		   
+			Cadx.Document.load$(docid)
+			  .then(function(doc){
+					Ext.getCmp('CustomizeFormPanel').unmask();
+				  view.document(doc);
+				  return Cx.fit$( doc.allFigures(), view );
+			  })
+			 .then(function(){
+				 
+			   _.each(doc.allFigures(), function(figure){
+			  
+				if(figure.xType() == "CadX.Name")
+					figure.text(jerseyName);
+				else if(figure.xType() == "CadX.Number")
+					figure.text(jerseyNumber);
+			   else{
+					if(figure.text)
+						console.log(figure.text());
+						console.log(figure.xType());
+				   }
+				});
+				
+				doc.commit$();
+			});
+	}
     </script>
 	 <style type="text/css">
 	 html, body {
@@ -62,6 +131,6 @@
     <link rel="stylesheet" href="All.css">
     <script type="text/javascript" src="app.js"></script>  
 </head>
-<body>
+<body onload="javascript:processCanvas();">
 </body>
 </html>

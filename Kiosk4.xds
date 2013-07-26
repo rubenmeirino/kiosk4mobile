@@ -114,6 +114,14 @@
                 "app/view/alertPanel.js"
             ],
             "className": "alertPanel"
+        },
+        "e5297c8c-c9b6-4eed-b0a1-2d02278edb55": {
+            "paths": [
+                "metadata/view/CustomizeFormPanel",
+                "app/view/override/CustomizeFormPanel.js",
+                "app/view/CustomizeFormPanel.js"
+            ],
+            "className": "CustomizeFormPanel"
         }
     },
     "viewOrderMap": {
@@ -128,7 +136,8 @@
             "9d21eac1-a0fb-46cc-9cc6-e3333b92cc5d",
             "110063a5-125b-4e8d-8b64-48453e4b7c0a",
             "ba0ed2cc-1aa1-465f-9efc-a04b5ff537aa",
-            "bb54680e-6f44-4855-8c5f-b230d8add7b7"
+            "bb54680e-6f44-4855-8c5f-b230d8add7b7",
+            "e5297c8c-c9b6-4eed-b0a1-2d02278edb55"
         ],
         "store": [],
         "controller": [

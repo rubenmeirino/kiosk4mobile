@@ -51,7 +51,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "sizeBut"
+                                    "AdultsizeBut"
                                 ],
                                 "ui": "confirm",
                                 "text": "Small"
@@ -79,7 +79,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "sizeBut"
+                                    "AdultsizeBut"
                                 ],
                                 "ui": "confirm",
                                 "text": "Medium"
@@ -107,7 +107,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "sizeBut"
+                                    "AdultsizeBut"
                                 ],
                                 "ui": "confirm",
                                 "text": "Large"
@@ -151,7 +151,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "sizeBut"
+                                    "AdultsizeBut"
                                 ],
                                 "ui": "confirm",
                                 "text": "X Large"
@@ -179,7 +179,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "sizeBut"
+                                    "AdultsizeBut"
                                 ],
                                 "ui": "confirm",
                                 "text": "XX Large"
@@ -228,7 +228,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "sizeBut"
+                                    "YouthsizeBut"
                                 ],
                                 "ui": "confirm",
                                 "text": "Small"
@@ -256,7 +256,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "sizeBut"
+                                    "YouthsizeBut"
                                 ],
                                 "ui": "confirm",
                                 "text": "Medium"
@@ -284,7 +284,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "sizeBut"
+                                    "YouthsizeBut"
                                 ],
                                 "ui": "confirm",
                                 "text": "Large"
@@ -327,7 +327,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "sizeBut"
+                                    "YouthsizeBut"
                                 ],
                                 "ui": "confirm",
                                 "text": "X Large"
@@ -355,7 +355,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "sizeBut"
+                                    "YouthsizeBut"
                                 ],
                                 "ui": "confirm",
                                 "text": "XX Large"
@@ -413,30 +413,6 @@
                             "designerId": "0b9af35e-7ebb-4c2e-a243-38cd9cfb4b97"
                         }
                     ]
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "designerId": "a4847230-ceee-4d25-ac8f-3615977d9391"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null,
-                        "html": "<img src=\"img/Logo.png\" />",
-                        "padding": 0,
-                        "text": null
-                    },
-                    "designerId": "2c69e708-159a-4daf-8a84-9bbd460417cf"
                 }
             ]
         },

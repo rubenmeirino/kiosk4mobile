@@ -45,9 +45,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
-                        "maxLength": 10,
-                        "placeHolder": "Name"
+                        "label": "Name",
+                        "labelWidth": "40%",
+                        "maxLength": 12,
+                        "placeHolder": "Required"
                     },
                     "designerId": "505c1c23-c730-4bbd-a814-0a9044b7259b"
                 },
@@ -59,8 +60,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
-                        "placeHolder": "Number"
+                        "label": "Number",
+                        "labelWidth": "40%",
+                        "maxLength": 2,
+                        "placeHolder": "Required"
                     },
                     "designerId": "3aacd704-2903-4ee9-8b9b-5b9f148d0598"
                 }
@@ -75,7 +78,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "title": "Custom name/Number"
+                "title": "Custom Name/Number"
             },
             "designerId": "bb1b0474-4897-4460-904b-67ea8f3554f1",
             "cn": [
@@ -113,30 +116,6 @@
                             "designerId": "dd8733d1-3063-4e24-9749-655cfa2b8e38"
                         }
                     ]
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "designerId": "ec611d0b-3fb9-4bfc-af2c-b5f7e075f3d7"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null,
-                        "html": "<img src=\"img/Logo.png\" />",
-                        "padding": 0,
-                        "text": null
-                    },
-                    "designerId": "1d5910f8-05ed-4b7e-a3b5-8849b28c07d0"
                 }
             ]
         },
@@ -168,12 +147,17 @@
                         ],
                         "implHandler": [
                             "Kiosk4.app.oldPage='NameOrNumber';\r",
-                            "if(!Ext.getCmp('CheckOutPanel')){Ext.Viewport.add({xtype: 'CheckOutPanel'});}\r",
-                            "Ext.getCmp('CheckOutPanel').show({type:'slideIn',direction:'left'});\r",
+                            "if(!Ext.getCmp('CustomizeFormPanel')){Ext.Viewport.add({xtype: 'CustomizeFormPanel'});}\r",
+                            "Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'left'});\r",
                             "Ext.getCmp('NameAndNumber').hide();\r",
-                            "Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue();\r",
+                            "Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);\r",
+                            "Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue()+\"\";\r",
                             "Kiosk4.app.jerseyName=Ext.getCmp('NameAndNumber').items.items[1].items.items[0].getValue();\r",
-                            "Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                            "\r",
+                            "Ext.getCmp('CustomizeFormPanel').setValues({\r",
+                            "    name:Kiosk4.app.jerseyName,\r",
+                            "    number:Kiosk4.app.jerseyNumber\r",
+                            "});"
                         ]
                     },
                     "designerId": "d1295b1f-72bc-4542-82df-6d9ba9abfa97"

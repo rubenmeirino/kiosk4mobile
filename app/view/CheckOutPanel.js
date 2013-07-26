@@ -29,23 +29,33 @@ Ext.define('Kiosk4.view.CheckOutPanel', {
                 items: [
                     {
                         xtype: 'textfield',
-                        placeHolder: 'Name'
+                        label: 'Name',
+                        labelWidth: '40%',
+                        placeHolder: 'Required'
                     },
                     {
                         xtype: 'textfield',
-                        placeHolder: 'Address'
+                        label: 'Address',
+                        labelWidth: '40%',
+                        placeHolder: 'Required'
                     },
                     {
                         xtype: 'textfield',
-                        placeHolder: 'City'
+                        label: 'City',
+                        labelWidth: '40%',
+                        placeHolder: 'Required'
                     },
                     {
                         xtype: 'textfield',
-                        placeHolder: 'State'
+                        label: 'State',
+                        labelWidth: '40%',
+                        placeHolder: 'Required'
                     },
                     {
                         xtype: 'textfield',
-                        placeHolder: 'Zip code'
+                        label: 'Zip code',
+                        labelWidth: '40%',
+                        placeHolder: 'Required'
                     }
                 ]
             },
@@ -57,27 +67,12 @@ Ext.define('Kiosk4.view.CheckOutPanel', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
-                            if(Kiosk4.app.oldPage=='RosterPanel'){
-                                if(!Ext.getCmp('RosterPanel')){Ext.Viewport.add({xtype: 'NameAndNumber'});}
-                                Ext.getCmp('RosterPanel').show({type:'slideIn',direction:'right'});
-                                Ext.getCmp('CheckOutPanel').hide();
-                            }else{
-                                if(!Ext.getCmp('NameAndNumber')){Ext.Viewport.add({xtype: 'NameAndNumber'});}
-                                Ext.getCmp('NameAndNumber').show({type:'slideIn',direction:'right'});
-                                Ext.getCmp('CheckOutPanel').hide();
-
-                            }
+                            if(!Ext.getCmp('CustomizeFormPanel')){Ext.Viewport.add({xtype: 'CustomizeFormPanel'});}
+                            Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'right'});
+                            Ext.getCmp('CheckOutPanel').hide();
                         },
                         ui: 'back',
                         text: 'Back'
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        html: '<img src="img/Logo.png" />',
-                        padding: 0
                     }
                 ]
             },
@@ -87,7 +82,7 @@ Ext.define('Kiosk4.view.CheckOutPanel', {
                     if(!Ext.getCmp('CardInfoPanel')){Ext.Viewport.add({xtype: 'CardInfoPanel'});}
                     Ext.getCmp('CardInfoPanel').show({type:'slideIn',direction:'left'});
                     Ext.getCmp('CheckOutPanel').hide();
-                    Ext.getCmp('CardInfoPanel').items.items[3].setTitle(Ext.getCmp('ItemInfo').getData().Name+"("+Ext.getCmp('ItemInfo').getData().amount+")");
+                    Ext.getCmp('CardInfoPanel').items.items[3].setTitle(Ext.getCmp('ItemInfo').getData().Name);
                 },
                 ui: 'confirm',
                 text: 'Proceed'

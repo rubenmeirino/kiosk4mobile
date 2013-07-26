@@ -30,19 +30,24 @@ Ext.define('Kiosk4.view.NameAndNumber', {
                 items: [
                     {
                         xtype: 'textfield',
-                        maxLength: 10,
-                        placeHolder: 'Name'
+                        label: 'Name',
+                        labelWidth: '40%',
+                        maxLength: 12,
+                        placeHolder: 'Required'
                     },
                     {
                         xtype: 'numberfield',
-                        placeHolder: 'Number'
+                        label: 'Number',
+                        labelWidth: '40%',
+                        maxLength: 2,
+                        placeHolder: 'Required'
                     }
                 ]
             },
             {
                 xtype: 'toolbar',
                 docked: 'top',
-                title: 'Custom name/Number',
+                title: 'Custom Name/Number',
                 items: [
                     {
                         xtype: 'button',
@@ -52,14 +57,6 @@ Ext.define('Kiosk4.view.NameAndNumber', {
                         },
                         ui: 'back',
                         text: 'Back'
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        html: '<img src="img/Logo.png" />',
-                        padding: 0
                     }
                 ]
             },
@@ -67,12 +64,17 @@ Ext.define('Kiosk4.view.NameAndNumber', {
                 xtype: 'button',
                 handler: function(button, event) {
                     Kiosk4.app.oldPage='NameOrNumber';
-                    if(!Ext.getCmp('CheckOutPanel')){Ext.Viewport.add({xtype: 'CheckOutPanel'});}
-                    Ext.getCmp('CheckOutPanel').show({type:'slideIn',direction:'left'});
+                    if(!Ext.getCmp('CustomizeFormPanel')){Ext.Viewport.add({xtype: 'CustomizeFormPanel'});}
+                    Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'left'});
                     Ext.getCmp('NameAndNumber').hide();
-                    Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue();
+                    Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);
+                    Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue()+"";
                     Kiosk4.app.jerseyName=Ext.getCmp('NameAndNumber').items.items[1].items.items[0].getValue();
-                    Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name+"("+Ext.getCmp('ItemInfo').getData().amount+")");
+
+                    Ext.getCmp('CustomizeFormPanel').setValues({
+                        name:Kiosk4.app.jerseyName,
+                        number:Kiosk4.app.jerseyNumber
+                    });
                 },
                 ui: 'confirm',
                 text: 'CheckOut'

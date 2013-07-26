@@ -26,6 +26,8 @@ Ext.define('Kiosk4.view.CardInfoPanel', {
                 items: [
                     {
                         xtype: 'selectfield',
+                        label: 'Card Type',
+                        labelWidth: '40%',
                         options: [
                             {
                                 text: 'Visa'
@@ -37,15 +39,21 @@ Ext.define('Kiosk4.view.CardInfoPanel', {
                     },
                     {
                         xtype: 'textfield',
-                        placeHolder: 'card Number'
+                        label: 'card Number',
+                        labelWidth: '40%',
+                        placeHolder: 'Required'
                     },
                     {
                         xtype: 'textfield',
-                        placeHolder: 'Expiration'
+                        label: 'Expiration',
+                        labelWidth: '40%',
+                        placeHolder: 'Required'
                     },
                     {
                         xtype: 'textfield',
-                        placeHolder: 'CSV Code'
+                        label: 'CSV Code',
+                        labelWidth: '40%',
+                        placeHolder: 'Required'
                     }
                 ]
             },
@@ -62,14 +70,6 @@ Ext.define('Kiosk4.view.CardInfoPanel', {
                         },
                         ui: 'back',
                         text: 'Back'
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        html: '<img src="img/Logo.png" />',
-                        padding: 0
                     }
                 ]
             },
@@ -81,7 +81,7 @@ Ext.define('Kiosk4.view.CardInfoPanel', {
                     Ext.getCmp('CardInfoPanel').hide();
                     var Data={
                         jerseySize:Ext.getCmp('ItemInfo').getData().Name,
-                        productPrice:Ext.getCmp('ItemInfo').getData().amount,
+                        productPrice:Kiosk4.app.size,
                         jerseyName:Kiosk4.app.jerseyName,
                         jerseyNumber:Kiosk4.app.jerseyNumber,
                         CurName:Ext.getCmp('CheckOutPanel').items.items[1].items.items[0].getValue(),

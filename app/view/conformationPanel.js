@@ -14,7 +14,7 @@
  */
 
 Ext.define('Kiosk4.view.conformationPanel', {
-    extend: 'Ext.form.Panel',
+    extend: 'Ext.Panel',
     alias: 'widget.conformationPanel',
 
     config: {
@@ -58,7 +58,14 @@ Ext.define('Kiosk4.view.conformationPanel', {
                             Ext.getCmp('SizePanel').show({type:'slideIn',direction:'left'});
                             Ext.getCmp('HomePanel').hide();
                             Ext.getCmp('conformationPanel').hide();
-                            Ext.getCmp('SizePanel').items.items[3].setTitle(Ext.getCmp('ItemInfo').getData().Name+"("+Ext.getCmp('ItemInfo').getData().amount+")");
+                            Ext.getCmp('SizePanel').items.items[3].setTitle(Ext.getCmp('ItemInfo').getData().Name+'');
+
+                            if(Ext.getCmp('ItemInfo').getData().Name+''=='Replica Home'){
+                                Kiosk4.app.classId = 'f43657a1-c83d-499a-ac44-6818d3290395';    
+                            }
+                            else{
+                                Kiosk4.app.classId = 'a88943ae-384f-462b-b4e7-a15f1d35f459';
+                            }
                         },
                         ui: 'confirm',
                         width: 60,

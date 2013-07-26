@@ -23,13 +23,9 @@
                     "if(!Ext.getCmp('conformationPanel')){Ext.Viewport.add({xtype: 'conformationPanel'});}\r",
                     "Ext.getCmp('conformationPanel').show({type:'popIn',direction:'left'});\r",
                     "if(button.config.no==1){\r",
-                    "    data={Name:\"Replica Home\",amount:'$50',img:\"img/Dallas_3.jpg\"};\r",
+                    "    data={Name:\"Replica Home\",amount:'$100.00 - $150.00',img:\"img/Dallas_3.jpg\"};\r",
                     "}else if(button.config.no==2){\r",
-                    "    data={Name:\"Replica Away\",amount:'$60',img:\"img/Dallas_4.jpg\"};\r",
-                    "}else if(button.config.no==3){\r",
-                    "    data={Name:\"Premier Home\",amount:'$70',img:\"img/Dallas_2.jpg\"};\r",
-                    "}else if(button.config.no==4){\r",
-                    "    data={Name:\"Premier Away\",amount:'$80',img:\"img/Dallas_1.jpg\"};\r",
+                    "    data={Name:\"Replica Away\",amount:'$100.00 - $150.00',img:\"img/Dallas_4.jpg\"};\r",
                     "}\r",
                     "Ext.getCmp('ItemInfo').setData(data);"
                 ],
@@ -49,14 +45,15 @@
             "userConfig": {
                 "fn": "onButtonRelease1",
                 "implHandler": [
+                    "Kiosk4.app.size='$150';\r",
                     "if(!Ext.getCmp('CustomizePanel')){Ext.Viewport.add({xtype: 'CustomizePanel'});}\r",
                     "Ext.getCmp('CustomizePanel').show({type:'slideIn',direction:'left'});\r",
                     "Ext.getCmp('SizePanel').hide();\r",
-                    "Ext.getCmp('CustomizePanel').items.items[5].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                    "Ext.getCmp('CustomizePanel').items.items[5].setTitle(Ext.getCmp('ItemInfo').getData().Name);"
                 ],
                 "name": "release",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[cls=sizeBut]"
+                "designer|controlQuery": "button[cls=AdultsizeBut]"
             },
             "designerId": "00f39ef2-8105-4181-ab0e-07c1df17c6d3"
         },
@@ -73,14 +70,10 @@
                     "if(!Ext.getCmp('conformationPanel')){Ext.Viewport.add({xtype: 'conformationPanel'});}\r",
                     "Ext.getCmp('conformationPanel').show({type:'popIn',direction:'left'});\r",
                     "if(button.config.no==1){\r",
-                    "    data={Name:\"Replica Home\",amount:'$50',img:\"img/Dallas_3.jpg\"};\r",
+                    "    data={Name:\"Replica Home\",amount:'$100.00 - $150.00',img:\"img/img4.png\"};\r",
                     "}else if(button.config.no==2){\r",
-                    "    data={Name:\"Replica Away\",amount:'$60',img:\"img/Dallas_4.jpg\"};\r",
-                    "}else if(button.config.no==3){\r",
-                    "    data={Name:\"Premier Home\",amount:'$70',img:\"img/Dallas_2.jpg\"};\r",
-                    "}else if(button.config.no==4){\r",
-                    "    data={Name:\"Premier Away\",amount:'$80',img:\"img/Dallas_1.jpg\"};\r",
-                    "}\r",
+                    "    data={Name:\"Replica Away\",amount:'$100.00 - $150.00',img:\"img/img5.png\"};\r",
+                    "}\t\r",
                     "Ext.getCmp('ItemInfo').setData(data);"
                 ],
                 "name": "release",
@@ -88,6 +81,28 @@
                 "designer|controlQuery": "button[cls=HomeCls]"
             },
             "designerId": "65590e16-ac64-47a3-a843-8e955e8cb9d4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onButtonRelease3",
+                "implHandler": [
+                    "Kiosk4.app.size='$100';\r",
+                    "if(!Ext.getCmp('CustomizePanel')){Ext.Viewport.add({xtype: 'CustomizePanel'});}\r",
+                    "Ext.getCmp('CustomizePanel').show({type:'slideIn',direction:'left'});\r",
+                    "Ext.getCmp('SizePanel').hide();\r",
+                    "Ext.getCmp('CustomizePanel').items.items[5].setTitle(Ext.getCmp('ItemInfo').getData().Name);"
+                ],
+                "name": "release",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[cls=YouthsizeBut]"
+            },
+            "designerId": "43a0b7b5-05fb-4d5d-ae45-d76066fa7d4f"
         }
     ]
 }

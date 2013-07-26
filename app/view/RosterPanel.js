@@ -79,14 +79,6 @@ Ext.define('Kiosk4.view.RosterPanel', {
                         },
                         ui: 'back',
                         text: 'Back'
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        html: '<img src="img/Logo.png" />',
-                        padding: 0
                     }
                 ]
             },
@@ -105,13 +97,23 @@ Ext.define('Kiosk4.view.RosterPanel', {
 
     onRosterPanelItemTap: function(dataview, index, target, record, e, eOpts) {
         Kiosk4.app.oldPage='RosterPanel';
-        if(!Ext.getCmp('CheckOutPanel')){Ext.Viewport.add({xtype: 'CheckOutPanel'});}
+        /*if(!Ext.getCmp('CheckOutPanel')){Ext.Viewport.add({xtype: 'CheckOutPanel'});}
         Ext.getCmp('CheckOutPanel').show({type:'slideIn',direction:'left'});
         Ext.getCmp('RosterPanel').hide();
+        Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name);*/
         var title=record.data.title;var temp=title.split('-');
         Kiosk4.app.jerseyNumber=temp[1];
         Kiosk4.app.jerseyName=temp[0];
-        Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name+"("+Ext.getCmp('ItemInfo').getData().amount+")");
+        if(!Ext.getCmp('CustomizeFormPanel')){Ext.Viewport.add({xtype: 'CustomizeFormPanel'});}
+        Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'left'});
+        Ext.getCmp('RosterPanel').hide();
+        Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);
+        Ext.getCmp('CustomizeFormPanel').setValues({
+            name:Kiosk4.app.jerseyName,
+            number:Kiosk4.app.jerseyNumber
+        });
+        //Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue();
+        //Kiosk4.app.jerseyName=Ext.getCmp('NameAndNumber').items.items[1].items.items[0].getValue();
     }
 
 });

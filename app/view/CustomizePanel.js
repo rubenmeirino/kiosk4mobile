@@ -31,7 +31,7 @@ Ext.define('Kiosk4.view.CustomizePanel', {
                     if(!Ext.getCmp('NameAndNumber')){Ext.Viewport.add({xtype: 'NameAndNumber'});}
                     Ext.getCmp('NameAndNumber').show({type:'slideIn',direction:'left'});
                     Ext.getCmp('CustomizePanel').hide();
-                    Ext.getCmp('NameAndNumber').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name+"("+Ext.getCmp('ItemInfo').getData().amount+")");
+                    Ext.getCmp('NameAndNumber').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name);
                 },
                 ui: 'confirm',
                 text: 'Custom name and number'
@@ -46,7 +46,7 @@ Ext.define('Kiosk4.view.CustomizePanel', {
                     if(!Ext.getCmp('RosterPanel')){Ext.Viewport.add({xtype: 'RosterPanel'});}
                     Ext.getCmp('RosterPanel').show({type:'slideIn',direction:'left'});
                     Ext.getCmp('CustomizePanel').hide();
-                    Ext.getCmp('RosterPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name+"("+Ext.getCmp('ItemInfo').getData().amount+")");
+                    Ext.getCmp('RosterPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);
                 },
                 ui: 'confirm',
                 text: 'Choose from team roster'
@@ -64,14 +64,6 @@ Ext.define('Kiosk4.view.CustomizePanel', {
                         },
                         ui: 'back',
                         text: 'Back'
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        html: '<img src="img/Logo.png" />',
-                        padding: 0
                     }
                 ]
             },

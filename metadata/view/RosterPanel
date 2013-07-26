@@ -77,30 +77,6 @@
                             "designerId": "da062bd5-d682-47b3-b49c-0ff0e33e05e0"
                         }
                     ]
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "designerId": "56308052-bcc9-4be6-b22c-e707c860cca7"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null,
-                        "html": "<img src=\"img/Logo.png\" />",
-                        "padding": 0,
-                        "text": null
-                    },
-                    "designerId": "eeee2187-f385-4d7a-aad7-4d61de4b2741"
                 }
             ]
         },
@@ -130,13 +106,23 @@
                 "fn": "onRosterPanelItemTap",
                 "implHandler": [
                     "Kiosk4.app.oldPage='RosterPanel';\r",
-                    "if(!Ext.getCmp('CheckOutPanel')){Ext.Viewport.add({xtype: 'CheckOutPanel'});}\r",
+                    "/*if(!Ext.getCmp('CheckOutPanel')){Ext.Viewport.add({xtype: 'CheckOutPanel'});}\r",
                     "Ext.getCmp('CheckOutPanel').show({type:'slideIn',direction:'left'});\r",
                     "Ext.getCmp('RosterPanel').hide();\r",
+                    "Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name);*/\r",
                     "var title=record.data.title;var temp=title.split('-');\r",
                     "Kiosk4.app.jerseyNumber=temp[1];\r",
                     "Kiosk4.app.jerseyName=temp[0];\r",
-                    "Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                    "if(!Ext.getCmp('CustomizeFormPanel')){Ext.Viewport.add({xtype: 'CustomizeFormPanel'});}\r",
+                    "Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'left'});\r",
+                    "Ext.getCmp('RosterPanel').hide();\r",
+                    "Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);\r",
+                    "Ext.getCmp('CustomizeFormPanel').setValues({\r",
+                    "    name:Kiosk4.app.jerseyName,\r",
+                    "    number:Kiosk4.app.jerseyNumber\r",
+                    "});\r",
+                    "//Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue();\r",
+                    "//Kiosk4.app.jerseyName=Ext.getCmp('NameAndNumber').items.items[1].items.items[0].getValue();"
                 ],
                 "name": "itemtap"
             },

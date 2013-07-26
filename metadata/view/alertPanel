@@ -76,7 +76,7 @@
                                     "event"
                                 ],
                                 "implHandler": [
-                                    " Ext.getCmp('HomePanel').show({type:'slideIn',direction:'right'});\r",
+                                    "Ext.getCmp('HomePanel').show({type:'slideIn',direction:'right'});\r",
                                     "Ext.getCmp('CardConfirmationPanel').hide();\r",
                                     "Ext.getCmp('alertPanel').hide();"
                                 ]

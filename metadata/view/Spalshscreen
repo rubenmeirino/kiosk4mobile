@@ -14,10 +14,22 @@
         "designer|userAlias": "Spalshscreen",
         "designer|initialView": true,
         "layout": "vbox",
-        "scrollable": false
+        "scrollable": true
     },
     "designerId": "ba0ed2cc-1aa1-465f-9efc-a04b5ff537aa",
     "cn": [
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<h1><b style=\"font-size: 25pt;\">Jersey Station</b></h1>"
+            },
+            "designerId": "0f9fc4d2-f54c-4e9e-b33d-a7a024c98584"
+        },
         {
             "type": "Ext.Container",
             "reference": {
@@ -42,8 +54,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 330,
-                        "html": "<div id=\"imgSplaceScreen\">  <div align=\"center\" style=\"padding-top: 70px;\"> <span ><img class=\"loaderimagecontainer\" src=\"images.jpg\" /> </span><div>Order your custom Jersey!</div></div> \t <div id=\"appLoadingIndicator\">             <div class=\"loadertextheader1\"></div>              <div class=\"loadertextheader2\"></div>              <div class=\"loaderimg\" style=\"margin-left: -40px;\" ><img src=\"modal-loader.gif\" /></div>     </div>   <div>",
+                        "height": 260,
+                        "html": "<div id=\"imgSplaceScreen\">  <div align=\"center\" > <span ><img class=\"loaderimagecontainer\" src=\"img/logo_img.png\" /> </span><div style=\"font-size: 25pt;\">Order your <br/>custom Jersey!</div></div> \t <div id=\"appLoadingIndicator\">             <div class=\"loadertextheader1\"></div>              <div class=\"loadertextheader2\"></div>              <div class=\"loaderimg\" style=\"margin-left: -40px;\" ></div>     </div>   <div>",
                         "width": "90%"
                     },
                     "designerId": "7042d840-bc53-4896-8fc7-112d2e88d585"
@@ -97,11 +109,11 @@
             "userConfig": {
                 "fn": "onSpalshscreenPainted",
                 "implHandler": [
-                    "Kiosk4.app.spalShScreen=setInterval(function(){\r",
+                    "/*Kiosk4.app.spalShScreen=setInterval(function(){\r",
                     "    if(!Ext.getCmp('HomePanel')){Ext.Viewport.add({xtype: 'HomePanel'});}\r",
                     "    Ext.getCmp('HomePanel').show({type:'slideIn',direction:'left'});\r",
                     "    Ext.getCmp('Spalshscreen').hide();\r",
-                    "},5000);"
+                    "},5000);*/"
                 ],
                 "name": "painted"
             },

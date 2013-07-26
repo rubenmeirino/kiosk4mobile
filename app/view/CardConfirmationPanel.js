@@ -33,14 +33,6 @@ Ext.define('Kiosk4.view.CardConfirmationPanel', {
                         },
                         ui: 'back',
                         text: 'Back'
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        html: '<img src="img/Logo.png" />',
-                        padding: 0
                     }
                 ]
             },
@@ -124,12 +116,94 @@ Ext.define('Kiosk4.view.CardConfirmationPanel', {
             {
                 xtype: 'button',
                 handler: function(button, event) {
-                    if(!Ext.getCmp('alertPanel')){Ext.Viewport.add({xtype: 'alertPanel'});}
-                    Ext.getCmp('alertPanel').show({type:'popIn'});
-                    /*Ext.Msg.alert('','<div>Thank you Your Order has been processed! Go All Stars!<div>',function(){
-                    Ext.getCmp('HomePanel').show({type:'slideIn',direction:'right'});
-                    Ext.getCmp('CardConfirmationPanel').hide();
-                    });*/
+                    //Fetch the value object
+                    var formValues = Ext.getCmp('CardConfirmationPanel').getValues();
+
+                    var assemblyOptions = { Number: Kiosk4.app.jerseyNumber, Roster: null, Name: Kiosk4.app.jerseyName};
+
+                    var orderProducts = [{
+                        AssemblyId: 1,
+                        AssemblyOptions: Ext.encode(assemblyOptions),
+                        DocumentCdl: '',
+                        ProductId: '5a358ddb-d48a-401a-a2ab-d94dc16febac'
+                    }];
+
+
+
+                    var Test = {};
+
+                    Test.HOST ='http://devapp.poweredbycadworx.com/';
+                    Test.SESSION_ID = '89a4a271-51cc-4997-806e-34b30c0c55c8'; //kiosksiesta user
+                    Test.DEPLOYMENT_ID = 'a588e924-8574-459e-a16b-6d13e9c1750f'; //kiosksiesta user Pistons deployment
+                    Test.TERMINAL_ID = ' 95fa42a7-1d26-49fe-99e4-6950ea4390ef'; //Northeast terminal in Pistons deployment
+
+
+                    var params = {
+                        DeploymentId: Test.DEPLOYMENT_ID,
+                        TimeStamp: Ext.Date.format(new Date(), 'c'), //c = ISO 8601 format, sending kiosk time to server
+                        FakeSwipe:true,
+                        CustomerData: Ext.encode({ Name: formValues.CurName, Phone: formValues.Phone, Email: formValues.Email }),
+                        OrderProductsJSON: Ext.encode(orderProducts)
+                    };
+
+                    Test.getUrl = function (path, options) {
+                        if (window.location.pathname.indexOf('CadXWeb') !== -1) {
+                            Test.HOST += 'CadXWeb/';
+                        }
+
+                        var url = Test.HOST + path + '?sessionid=' + Test.SESSION_ID;
+
+                        if (options && options.simulateTerminal) {
+                            url += '&terminalId=' + Test.TERMINAL_ID;
+                        }
+
+
+                        url += '&deploymentId=' + Test.DEPLOYMENT_ID;
+                        return url;
+                    };
+
+                    Test.request = function (url, params, callback, scope, method, responseType) {
+                        try {
+                            if (!callback || !scope || !url) {
+                                throw 'Test.request : missing parameters';
+                            }
+
+                            method = (typeof method == "undefined") ? 'POST' : method;
+                            responseType = (typeof responseType == "undefined") ? 'JSON' : responseType;
+
+                            return Ext.Ajax.request({
+                                failure: function(){
+                                }
+                                , method: method
+                                , params: params
+                                , responseType: responseType
+                                , responseCallback: callback
+                                , responseScope: scope
+                                , success: function(){
+                                    if(!Ext.getCmp('alertPanel')){Ext.Viewport.add({xtype: 'alertPanel'});}
+                                    Ext.getCmp('CardConfirmationPanel').unmask();
+                                    Ext.getCmp('alertPanel').show({type:'popIn'});            
+                                }
+                                , timeout: 60000
+                                , url: url
+                            });
+                        }
+                        catch (exception) {
+                            console.log(exception);
+                        }
+                    };
+                    Ext.getCmp('CardConfirmationPanel').mask({
+                        message:'Please wait, processing order...',
+                    xtype: 'loadmask'});
+                    Test.request(
+                    Test.getUrl('Kiosk/Order/Create', { simulateTerminal: true }),
+                    params,
+                    function(data, success, message, xmlHttpRequest, options) { //Callback
+                        if(!Ext.getCmp('alertPanel')){Ext.Viewport.add({xtype: 'alertPanel'});}
+                        Ext.getCmp('alertPanel').show({type:'popIn'});
+                    },
+                    this //Scope
+                    );
                 },
                 ui: 'confirm',
                 text: 'Submit'

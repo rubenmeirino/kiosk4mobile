@@ -36,7 +36,7 @@ Ext.define('Kiosk4.view.SizePanel', {
                         items: [
                             {
                                 xtype: 'button',
-                                cls: 'sizeBut',
+                                cls: 'AdultsizeBut',
                                 ui: 'confirm',
                                 text: 'Small'
                             },
@@ -46,7 +46,7 @@ Ext.define('Kiosk4.view.SizePanel', {
                             },
                             {
                                 xtype: 'button',
-                                cls: 'sizeBut',
+                                cls: 'AdultsizeBut',
                                 ui: 'confirm',
                                 text: 'Medium'
                             },
@@ -56,7 +56,7 @@ Ext.define('Kiosk4.view.SizePanel', {
                             },
                             {
                                 xtype: 'button',
-                                cls: 'sizeBut',
+                                cls: 'AdultsizeBut',
                                 ui: 'confirm',
                                 text: 'Large'
                             }
@@ -75,7 +75,7 @@ Ext.define('Kiosk4.view.SizePanel', {
                         items: [
                             {
                                 xtype: 'button',
-                                cls: 'sizeBut',
+                                cls: 'AdultsizeBut',
                                 ui: 'confirm',
                                 text: 'X Large'
                             },
@@ -85,7 +85,7 @@ Ext.define('Kiosk4.view.SizePanel', {
                             },
                             {
                                 xtype: 'button',
-                                cls: 'sizeBut',
+                                cls: 'AdultsizeBut',
                                 ui: 'confirm',
                                 text: 'XX Large'
                             }
@@ -108,7 +108,7 @@ Ext.define('Kiosk4.view.SizePanel', {
                         items: [
                             {
                                 xtype: 'button',
-                                cls: 'sizeBut',
+                                cls: 'YouthsizeBut',
                                 ui: 'confirm',
                                 text: 'Small'
                             },
@@ -118,7 +118,7 @@ Ext.define('Kiosk4.view.SizePanel', {
                             },
                             {
                                 xtype: 'button',
-                                cls: 'sizeBut',
+                                cls: 'YouthsizeBut',
                                 ui: 'confirm',
                                 text: 'Medium'
                             },
@@ -128,7 +128,7 @@ Ext.define('Kiosk4.view.SizePanel', {
                             },
                             {
                                 xtype: 'button',
-                                cls: 'sizeBut',
+                                cls: 'YouthsizeBut',
                                 ui: 'confirm',
                                 text: 'Large'
                             }
@@ -147,7 +147,7 @@ Ext.define('Kiosk4.view.SizePanel', {
                         items: [
                             {
                                 xtype: 'button',
-                                cls: 'sizeBut',
+                                cls: 'YouthsizeBut',
                                 ui: 'confirm',
                                 text: 'X Large'
                             },
@@ -157,7 +157,7 @@ Ext.define('Kiosk4.view.SizePanel', {
                             },
                             {
                                 xtype: 'button',
-                                cls: 'sizeBut',
+                                cls: 'YouthsizeBut',
                                 ui: 'confirm',
                                 text: 'XX Large'
                             }
@@ -178,14 +178,6 @@ Ext.define('Kiosk4.view.SizePanel', {
                         },
                         ui: 'back',
                         text: 'Back'
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        html: '<img src="img/Logo.png" />',
-                        padding: 0
                     }
                 ]
             },

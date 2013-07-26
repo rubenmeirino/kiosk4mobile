@@ -42,8 +42,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
-                        "placeHolder": "Name"
+                        "label": "Name",
+                        "labelWidth": "40%",
+                        "placeHolder": "Required"
                     },
                     "designerId": "ff23e42e-bed4-46f3-b4b2-64be98c5c078"
                 },
@@ -55,8 +56,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
-                        "placeHolder": "Address"
+                        "label": "Address",
+                        "labelWidth": "40%",
+                        "placeHolder": "Required"
                     },
                     "designerId": "67fa30e8-91be-4868-991a-3cdc66b8ea56"
                 },
@@ -68,8 +70,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
-                        "placeHolder": "City"
+                        "label": "City",
+                        "labelWidth": "40%",
+                        "placeHolder": "Required"
                     },
                     "designerId": "6ef0d4dc-33b8-4bf5-be32-7d413229755e"
                 },
@@ -81,8 +84,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
-                        "placeHolder": "State"
+                        "label": "State",
+                        "labelWidth": "40%",
+                        "placeHolder": "Required"
                     },
                     "designerId": "90b76c21-9f64-4bc2-b9b6-f2a97bbc15d6"
                 },
@@ -94,8 +98,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
-                        "placeHolder": "Zip code"
+                        "label": "Zip code",
+                        "labelWidth": "40%",
+                        "placeHolder": "Required"
                     },
                     "designerId": "f87270f9-7c84-4d0c-9d9e-65fd759e0c85"
                 }
@@ -141,45 +146,14 @@
                                     "event"
                                 ],
                                 "implHandler": [
-                                    "if(Kiosk4.app.oldPage=='RosterPanel'){\r",
-                                    "    if(!Ext.getCmp('RosterPanel')){Ext.Viewport.add({xtype: 'NameAndNumber'});}\r",
-                                    "    Ext.getCmp('RosterPanel').show({type:'slideIn',direction:'right'});\r",
-                                    "    Ext.getCmp('CheckOutPanel').hide();\r",
-                                    "}else{\r",
-                                    "    if(!Ext.getCmp('NameAndNumber')){Ext.Viewport.add({xtype: 'NameAndNumber'});}\r",
-                                    "    Ext.getCmp('NameAndNumber').show({type:'slideIn',direction:'right'});\r",
-                                    "    Ext.getCmp('CheckOutPanel').hide();\r",
-                                    "    \r",
-                                    "}"
+                                    "    if(!Ext.getCmp('CustomizeFormPanel')){Ext.Viewport.add({xtype: 'CustomizeFormPanel'});}\r",
+                                    "    Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'right'});\r",
+                                    "    Ext.getCmp('CheckOutPanel').hide();"
                                 ]
                             },
                             "designerId": "22315d79-c345-4229-88ef-52ba79952bb5"
                         }
                     ]
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "designerId": "dd871b7c-245f-47a6-9bbe-9d7213cdde55"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null,
-                        "html": "<img src=\"img/Logo.png\" />",
-                        "padding": 0,
-                        "text": null
-                    },
-                    "designerId": "68bd4d6d-2779-4c86-aafb-4b75f93845a0"
                 }
             ]
         },
@@ -213,7 +187,7 @@
                             "if(!Ext.getCmp('CardInfoPanel')){Ext.Viewport.add({xtype: 'CardInfoPanel'});}\r",
                             "Ext.getCmp('CardInfoPanel').show({type:'slideIn',direction:'left'});\r",
                             "Ext.getCmp('CheckOutPanel').hide();\r",
-                            "Ext.getCmp('CardInfoPanel').items.items[3].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                            "Ext.getCmp('CardInfoPanel').items.items[3].setTitle(Ext.getCmp('ItemInfo').getData().Name);"
                         ]
                     },
                     "designerId": "01155f09-f9a2-4dcb-aa34-70e891b27046"

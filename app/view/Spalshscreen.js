@@ -25,8 +25,12 @@ Ext.define('Kiosk4.view.Spalshscreen', {
             pack: 'center',
             type: 'vbox'
         },
-        scrollable: false,
+        scrollable: true,
         items: [
+            {
+                xtype: 'component',
+                html: '<h1><b style="font-size: 25pt;">Jersey Station</b></h1>'
+            },
             {
                 xtype: 'container',
                 ui: '',
@@ -39,8 +43,8 @@ Ext.define('Kiosk4.view.Spalshscreen', {
                 items: [
                     {
                         xtype: 'component',
-                        height: 330,
-                        html: '<div id="imgSplaceScreen">  <div align="center" style="padding-top: 70px;"> <span ><img class="loaderimagecontainer" src="images.jpg" /> </span><div>Order your custom Jersey!</div></div> 	 <div id="appLoadingIndicator">             <div class="loadertextheader1"></div>              <div class="loadertextheader2"></div>              <div class="loaderimg" style="margin-left: -40px;" ><img src="modal-loader.gif" /></div>     </div>   <div>',
+                        height: 260,
+                        html: '<div id="imgSplaceScreen">  <div align="center" > <span ><img class="loaderimagecontainer" src="img/logo_img.png" /> </span><div style="font-size: 25pt;">Order your <br/>custom Jersey!</div></div> 	 <div id="appLoadingIndicator">             <div class="loadertextheader1"></div>              <div class="loadertextheader2"></div>              <div class="loaderimg" style="margin-left: -40px;" ></div>     </div>   <div>',
                         width: '90%'
                     },
                     {
@@ -66,11 +70,11 @@ Ext.define('Kiosk4.view.Spalshscreen', {
     },
 
     onSpalshscreenPainted: function(element, eOpts) {
-        Kiosk4.app.spalShScreen=setInterval(function(){
-            if(!Ext.getCmp('HomePanel')){Ext.Viewport.add({xtype: 'HomePanel'});}
-            Ext.getCmp('HomePanel').show({type:'slideIn',direction:'left'});
-            Ext.getCmp('Spalshscreen').hide();
-        },5000);
+        /*Kiosk4.app.spalShScreen=setInterval(function(){
+        if(!Ext.getCmp('HomePanel')){Ext.Viewport.add({xtype: 'HomePanel'});}
+        Ext.getCmp('HomePanel').show({type:'slideIn',direction:'left'});
+        Ext.getCmp('Spalshscreen').hide();
+        },5000);*/
     }
 
 });

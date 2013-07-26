@@ -55,7 +55,7 @@
                             "if(!Ext.getCmp('NameAndNumber')){Ext.Viewport.add({xtype: 'NameAndNumber'});}\r",
                             "Ext.getCmp('NameAndNumber').show({type:'slideIn',direction:'left'});\r",
                             "Ext.getCmp('CustomizePanel').hide();\r",
-                            "Ext.getCmp('NameAndNumber').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                            "Ext.getCmp('NameAndNumber').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name);"
                         ]
                     },
                     "designerId": "dbbd749a-8c7a-4781-af4a-0423e81d0561"
@@ -104,7 +104,7 @@
                             "if(!Ext.getCmp('RosterPanel')){Ext.Viewport.add({xtype: 'RosterPanel'});}\r",
                             "Ext.getCmp('RosterPanel').show({type:'slideIn',direction:'left'});\r",
                             "Ext.getCmp('CustomizePanel').hide();\r",
-                            "Ext.getCmp('RosterPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name+\"(\"+Ext.getCmp('ItemInfo').getData().amount+\")\");"
+                            "Ext.getCmp('RosterPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);"
                         ]
                     },
                     "designerId": "bb7a1668-ca83-4112-b63c-970830c79769"
@@ -158,30 +158,6 @@
                             "designerId": "9a655b15-6695-44d2-b7ae-485998f1b762"
                         }
                     ]
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "designerId": "872e4524-93bb-457a-bc57-91e2ceaa12c8"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null,
-                        "html": "<img src=\"img/Logo.png\" />",
-                        "padding": 0,
-                        "text": null
-                    },
-                    "designerId": "9cd58414-e988-46ba-93ae-f553ce68d660"
                 }
             ]
         },

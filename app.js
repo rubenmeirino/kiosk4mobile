@@ -19,6 +19,10 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
+    viewport: {
+        autoMaximize: true
+    },
+
     views: [
         'NameAndNumber',
         'SizePanel',
@@ -30,7 +34,8 @@ Ext.application({
         'conformationPanel',
         'CardConfirmationPanel',
         'Spalshscreen',
-        'alertPanel'
+        'alertPanel',
+        'CustomizeFormPanel'
     ],
     controllers: [
         'mainCrl'
