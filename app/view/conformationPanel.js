@@ -58,7 +58,10 @@ Ext.define('Kiosk4.view.conformationPanel', {
                             Ext.getCmp('SizePanel').show({type:'slideIn',direction:'left'});
                             Ext.getCmp('HomePanel').hide();
                             Ext.getCmp('conformationPanel').hide();
-                            Ext.getCmp('SizePanel').items.items[3].setTitle(Ext.getCmp('ItemInfo').getData().Name+'');
+
+                            Kiosk4.app.SelectedJersey = Ext.getCmp('ItemInfo').getData().Name+' Jersey';
+
+                            Ext.getCmp('SizePanel').items.items[3].setTitle(Kiosk4.app.SelectedJersey);
 
                             if(Ext.getCmp('ItemInfo').getData().Name+''=='Replica Home'){
                                 Kiosk4.app.classId = 'f43657a1-c83d-499a-ac44-6818d3290395';    

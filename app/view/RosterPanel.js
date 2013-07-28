@@ -131,7 +131,7 @@ Ext.define('Kiosk4.view.RosterPanel', {
         if(!Ext.getCmp('CustomizeFormPanel')){Ext.Viewport.add({xtype: 'CustomizeFormPanel'});}
         Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'left'});
         Ext.getCmp('RosterPanel').hide();
-        Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);
+        Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Kiosk4.app.SelectedJersey);
         /*Ext.getCmp('CustomizeFormPanel').setValues({
         name:Kiosk4.app.jerseyName,
         number:Kiosk4.app.jerseyNumber

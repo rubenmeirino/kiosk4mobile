@@ -86,21 +86,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": "Jersey Size:",
-                        "labelWidth": "40%",
-                        "name": "jerseySize",
-                        "readOnly": true
-                    },
-                    "designerId": "19f753c7-459c-4bf7-90ef-dfe3360972ba"
-                },
-                {
-                    "type": "Ext.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
                         "designer|displayName": null,
                         "label": "Product Price:",
                         "labelWidth": "40%",
@@ -138,6 +123,36 @@
                         "readOnly": true
                     },
                     "designerId": "8c6a0dd7-402e-4d0a-9979-e9d585882b6e"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Jersey Size: ",
+                        "labelWidth": "40%",
+                        "name": "jerseySize",
+                        "readOnly": true
+                    },
+                    "designerId": "5adbf244-1334-4717-863f-d220f0541769"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Jersey Type: ",
+                        "labelWidth": "40%",
+                        "name": "jerseyType",
+                        "readOnly": true
+                    },
+                    "designerId": "1cb56fda-f52e-469c-b99e-8291a8d90b15"
                 }
             ]
         },
@@ -271,7 +286,7 @@
             "codeClass": null,
             "userConfig": {
                 "ui": "confirm",
-                "text": "Submit"
+                "text": "Complete Order"
             },
             "designerId": "cb3f436e-0824-41b0-9c4f-197e70933de1",
             "cn": [
@@ -355,7 +370,13 @@
                             "            , success: function(){\r",
                             "                if(!Ext.getCmp('alertPanel')){Ext.Viewport.add({xtype: 'alertPanel'});}\r",
                             "                Ext.getCmp('CardConfirmationPanel').unmask();\r",
-                            "                Ext.getCmp('alertPanel').show({type:'popIn'});            \r",
+                            "                Ext.getCmp('alertPanel').show({type:'popIn'});\r",
+                            "                Ext.getCmp('pnlOrderDetails').setData({\r",
+                            "                    Size:Kiosk4.app.JerseySize,\r",
+                            "                    JerseyType:Kiosk4.app.SelectedJersey,\r",
+                            "                    JerseyName:Kiosk4.app.jerseyName,\r",
+                            "                    Number:Kiosk4.app.jerseyNumber\r",
+                            "                });\r",
                             "            }\r",
                             "            , timeout: 60000\r",
                             "            , url: url\r",

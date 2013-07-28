@@ -67,7 +67,7 @@ Ext.define('Kiosk4.view.NameAndNumber', {
                     if(!Ext.getCmp('CustomizeFormPanel')){Ext.Viewport.add({xtype: 'CustomizeFormPanel'});}
                     Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'left'});
                     Ext.getCmp('NameAndNumber').hide();
-                    Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);
+                    Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Kiosk4.app.SelectedJersey);
                     Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue()+"";
                     Kiosk4.app.jerseyName=Ext.getCmp('NameAndNumber').items.items[1].items.items[0].getValue();
                     /*
@@ -77,7 +77,7 @@ Ext.define('Kiosk4.view.NameAndNumber', {
                     });*/
                 },
                 ui: 'confirm',
-                text: 'CheckOut'
+                text: 'Preview'
             },
             {
                 xtype: 'toolbar',

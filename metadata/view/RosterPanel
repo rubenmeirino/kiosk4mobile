@@ -133,7 +133,7 @@
                     "if(!Ext.getCmp('CustomizeFormPanel')){Ext.Viewport.add({xtype: 'CustomizeFormPanel'});}\r",
                     "Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'left'});\r",
                     "Ext.getCmp('RosterPanel').hide();\r",
-                    "Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);\r",
+                    "Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Kiosk4.app.SelectedJersey);\r",
                     "/*Ext.getCmp('CustomizeFormPanel').setValues({\r",
                     "name:Kiosk4.app.jerseyName,\r",
                     "number:Kiosk4.app.jerseyNumber\r",

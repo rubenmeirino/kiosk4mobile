@@ -170,6 +170,8 @@
                             "    productPrice:Kiosk4.app.size,\r",
                             "    jerseyName:Kiosk4.app.jerseyName,\r",
                             "    jerseyNumber:Kiosk4.app.jerseyNumber,\r",
+                            "    jerseySize:Kiosk4.app.JerseySize,\r",
+                            "    jerseyType:Kiosk4.app.SelectedJersey,\r",
                             "    CurName:Ext.getCmp('CheckOutPanel').items.items[1].items.items[0].getValue(),\r",
                             "    CurAddress:Ext.getCmp('CheckOutPanel').items.items[1].items.items[1].getValue(),\r",
                             "    CurCity:Ext.getCmp('CheckOutPanel').items.items[1].items.items[2].getValue(),\r",

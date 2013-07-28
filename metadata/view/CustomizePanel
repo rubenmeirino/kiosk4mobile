@@ -55,7 +55,7 @@
                             "if(!Ext.getCmp('NameAndNumber')){Ext.Viewport.add({xtype: 'NameAndNumber'});}\r",
                             "Ext.getCmp('NameAndNumber').show({type:'slideIn',direction:'left'});\r",
                             "Ext.getCmp('CustomizePanel').hide();\r",
-                            "Ext.getCmp('NameAndNumber').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name);"
+                            "Ext.getCmp('NameAndNumber').items.items[4].setTitle(Kiosk4.app.SelectedJersey);"
                         ]
                     },
                     "designerId": "dbbd749a-8c7a-4781-af4a-0423e81d0561"
@@ -104,7 +104,7 @@
                             "if(!Ext.getCmp('RosterPanel')){Ext.Viewport.add({xtype: 'RosterPanel'});}\r",
                             "Ext.getCmp('RosterPanel').show({type:'slideIn',direction:'left'});\r",
                             "Ext.getCmp('CustomizePanel').hide();\r",
-                            "Ext.getCmp('RosterPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);"
+                            "Ext.getCmp('RosterPanel').items.items[1].setTitle(Kiosk4.app.SelectedJersey);"
                         ]
                     },
                     "designerId": "bb7a1668-ca83-4112-b63c-970830c79769"

@@ -94,7 +94,7 @@ Ext.define('Kiosk4.view.CheckOutPanel', {
                     if(!Ext.getCmp('CardInfoPanel')){Ext.Viewport.add({xtype: 'CardInfoPanel'});}
                     Ext.getCmp('CardInfoPanel').show({type:'slideIn',direction:'left'});
                     Ext.getCmp('CheckOutPanel').hide();
-                    Ext.getCmp('CardInfoPanel').items.items[3].setTitle(Ext.getCmp('ItemInfo').getData().Name);
+                    Ext.getCmp('CardInfoPanel').items.items[3].setTitle(Kiosk4.app.SelectedJersey);
                 },
                 ui: 'confirm',
                 text: 'Proceed'

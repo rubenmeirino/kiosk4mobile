@@ -49,7 +49,9 @@ Ext.define('Kiosk4.controller.mainCrl', {
         if(!Ext.getCmp('CustomizePanel')){Ext.Viewport.add({xtype: 'CustomizePanel'});}
         Ext.getCmp('CustomizePanel').show({type:'slideIn',direction:'left'});
         Ext.getCmp('SizePanel').hide();
-        Ext.getCmp('CustomizePanel').items.items[5].setTitle(Ext.getCmp('ItemInfo').getData().Name);
+        Ext.getCmp('CustomizePanel').items.items[5].setTitle(Kiosk4.app.SelectedJersey);
+
+        Kiosk4.app.JerseySize = button.getText() + ' (Adult)';
     },
 
     onButtonRelease2: function(button, e, eOpts) {
@@ -68,7 +70,9 @@ Ext.define('Kiosk4.controller.mainCrl', {
         if(!Ext.getCmp('CustomizePanel')){Ext.Viewport.add({xtype: 'CustomizePanel'});}
         Ext.getCmp('CustomizePanel').show({type:'slideIn',direction:'left'});
         Ext.getCmp('SizePanel').hide();
-        Ext.getCmp('CustomizePanel').items.items[5].setTitle(Ext.getCmp('ItemInfo').getData().Name);
+        Ext.getCmp('CustomizePanel').items.items[5].setTitle(Kiosk4.app.SelectedJersey);
+
+        Kiosk4.app.JerseySize = button.getText() + ' (Youth)';
     }
 
 });

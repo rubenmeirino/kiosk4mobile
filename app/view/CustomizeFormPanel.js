@@ -62,7 +62,7 @@ Ext.define('Kiosk4.view.CustomizeFormPanel', {
                     if(!Ext.getCmp('CheckOutPanel')){Ext.Viewport.add({xtype: 'CheckOutPanel'});}
                     Ext.getCmp('CheckOutPanel').show({type:'slideIn',direction:'left'});
                     Ext.getCmp('CustomizeFormPanel').hide();
-                    Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name);
+                    Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Kiosk4.app.SelectedJersey);
                 },
                 margin: '0 10 0 10',
                 ui: 'confirm',

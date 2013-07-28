@@ -19,7 +19,7 @@ Ext.define('Kiosk4.view.alertPanel', {
 
     config: {
         centered: true,
-        height: 150,
+        height: 250,
         id: 'alertPanel',
         itemId: 'alertPanel',
         width: 300,
@@ -28,8 +28,8 @@ Ext.define('Kiosk4.view.alertPanel', {
         items: [
             {
                 xtype: 'container',
-                height: '100%',
-                width: '100%',
+                height: 217,
+                width: 254,
                 layout: {
                     align: 'center',
                     type: 'vbox'
@@ -37,9 +37,12 @@ Ext.define('Kiosk4.view.alertPanel', {
                 items: [
                     {
                         xtype: 'component',
-                        height: 65,
-                        html: ' <div align="center" style="color: #fff;font-size: 12pt;">Thank You!<br/>  Your Order has been processed<br/>  Go All Stars!<br/></div>',
-                        margin: '0 0 10 0'
+                        height: 150,
+                        id: 'pnlOrderDetails',
+                        margin: '0 0 10 0',
+                        tpl: [
+                            '<div align="center" style="color: #fff;font-size: 12pt;">Thank You!<br/>  Your Order has been processed.<br/><br/>Jersey Type: {JerseyType}<br/>Jersey Size:{Size}<br/>Jersey Name:{JerseyName}<br/>Number:{Number}</br></div>'
+                        ]
                     },
                     {
                         xtype: 'button',
@@ -47,6 +50,10 @@ Ext.define('Kiosk4.view.alertPanel', {
                             Ext.getCmp('HomePanel').show({type:'slideIn',direction:'right'});
                             Ext.getCmp('CardConfirmationPanel').hide();
                             Ext.getCmp('alertPanel').hide();
+
+                            Ext.getCmp('CardConfirmationPanel').reset();
+                            Ext.getCmp('CheckOutPanel').reset();
+                            Ext.getCmp('CardInfoPanel').reset();
                         },
                         ui: 'confirm',
                         width: 100,

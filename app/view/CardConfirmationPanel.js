@@ -43,13 +43,6 @@ Ext.define('Kiosk4.view.CardConfirmationPanel', {
                 items: [
                     {
                         xtype: 'textfield',
-                        label: 'Jersey Size:',
-                        labelWidth: '40%',
-                        name: 'jerseySize',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
                         label: 'Product Price:',
                         labelWidth: '40%',
                         name: 'productPrice',
@@ -67,6 +60,20 @@ Ext.define('Kiosk4.view.CardConfirmationPanel', {
                         label: 'Jersey Number: ',
                         labelWidth: '40%',
                         name: 'jerseyNumber',
+                        readOnly: true
+                    },
+                    {
+                        xtype: 'textfield',
+                        label: 'Jersey Size: ',
+                        labelWidth: '40%',
+                        name: 'jerseySize',
+                        readOnly: true
+                    },
+                    {
+                        xtype: 'textfield',
+                        label: 'Jersey Type: ',
+                        labelWidth: '40%',
+                        name: 'jerseyType',
                         readOnly: true
                     }
                 ]
@@ -196,7 +203,13 @@ Ext.define('Kiosk4.view.CardConfirmationPanel', {
                                 , success: function(){
                                     if(!Ext.getCmp('alertPanel')){Ext.Viewport.add({xtype: 'alertPanel'});}
                                     Ext.getCmp('CardConfirmationPanel').unmask();
-                                    Ext.getCmp('alertPanel').show({type:'popIn'});            
+                                    Ext.getCmp('alertPanel').show({type:'popIn'});
+                                    Ext.getCmp('pnlOrderDetails').setData({
+                                        Size:Kiosk4.app.JerseySize,
+                                        JerseyType:Kiosk4.app.SelectedJersey,
+                                        JerseyName:Kiosk4.app.jerseyName,
+                                        Number:Kiosk4.app.jerseyNumber
+                                    });
                                 }
                                 , timeout: 60000
                                 , url: url
@@ -220,7 +233,7 @@ Ext.define('Kiosk4.view.CardConfirmationPanel', {
                     );
                 },
                 ui: 'confirm',
-                text: 'Submit'
+                text: 'Complete Order'
             }
         ]
     }

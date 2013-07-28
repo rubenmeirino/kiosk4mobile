@@ -84,6 +84,8 @@ Ext.define('Kiosk4.view.CardInfoPanel', {
                         productPrice:Kiosk4.app.size,
                         jerseyName:Kiosk4.app.jerseyName,
                         jerseyNumber:Kiosk4.app.jerseyNumber,
+                        jerseySize:Kiosk4.app.JerseySize,
+                        jerseyType:Kiosk4.app.SelectedJersey,
                         CurName:Ext.getCmp('CheckOutPanel').items.items[1].items.items[0].getValue(),
                         CurAddress:Ext.getCmp('CheckOutPanel').items.items[1].items.items[1].getValue(),
                         CurCity:Ext.getCmp('CheckOutPanel').items.items[1].items.items[2].getValue(),

@@ -215,7 +215,7 @@
                             "if(!Ext.getCmp('CardInfoPanel')){Ext.Viewport.add({xtype: 'CardInfoPanel'});}\r",
                             "Ext.getCmp('CardInfoPanel').show({type:'slideIn',direction:'left'});\r",
                             "Ext.getCmp('CheckOutPanel').hide();\r",
-                            "Ext.getCmp('CardInfoPanel').items.items[3].setTitle(Ext.getCmp('ItemInfo').getData().Name);"
+                            "Ext.getCmp('CardInfoPanel').items.items[3].setTitle(Kiosk4.app.SelectedJersey);"
                         ]
                     },
                     "designerId": "01155f09-f9a2-4dcb-aa34-70e891b27046"

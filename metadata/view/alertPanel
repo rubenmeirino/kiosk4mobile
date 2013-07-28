@@ -7,7 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "centered": true,
-        "height": 150,
+        "height": 250,
         "id": "alertPanel",
         "itemId": "alertPanel",
         "maxWidth": null,
@@ -28,8 +28,8 @@
             "codeClass": null,
             "userConfig": {
                 "container|align": "center",
-                "height": "100%",
-                "width": "100%",
+                "height": 217,
+                "width": 254,
                 "layout": "vbox"
             },
             "designerId": "bd629457-0987-45e4-ab1f-9a80e129e982",
@@ -42,11 +42,29 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 65,
-                        "html": " <div align=\"center\" style=\"color: #fff;font-size: 12pt;\">Thank You!<br/>  Your Order has been processed<br/>  Go All Stars!<br/></div>",
+                        "height": 150,
+                        "html": null,
+                        "id": "pnlOrderDetails",
                         "margin": "0 0 10 0"
                     },
-                    "designerId": "fb82525a-7f04-4e07-b2b9-1185844fc039"
+                    "designerId": "fb82525a-7f04-4e07-b2b9-1185844fc039",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "<div align=\"center\" style=\"color: #fff;font-size: 12pt;\">Thank You!<br/>  Your Order has been processed.<br/><br/>Jersey Type: {JerseyType}<br/>Jersey Size:{Size}<br/>Jersey Name:{JerseyName}<br/>Number:{Number}</br></div>"
+                                ],
+                                "designer|displayName": "tpl"
+                            },
+                            "designerId": "d301d44a-eb99-4897-9b20-7fccf8d131d8"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Button",
@@ -78,7 +96,11 @@
                                 "implHandler": [
                                     "Ext.getCmp('HomePanel').show({type:'slideIn',direction:'right'});\r",
                                     "Ext.getCmp('CardConfirmationPanel').hide();\r",
-                                    "Ext.getCmp('alertPanel').hide();"
+                                    "Ext.getCmp('alertPanel').hide();\r",
+                                    "\r",
+                                    "Ext.getCmp('CardConfirmationPanel').reset();\r",
+                                    "Ext.getCmp('CheckOutPanel').reset();\r",
+                                    "Ext.getCmp('CardInfoPanel').reset();"
                                 ]
                             },
                             "designerId": "ed21ea26-58e2-4a25-838d-2cc2098f2828"

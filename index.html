@@ -65,8 +65,8 @@
 			 .then(function(){
 				 
 			   _.each(doc.allFigures(), function(figure){
-			  
-				if(figure.xType() == "CadX.Name")
+
+				if(figure.text && (figure.xType() == "CadX.Name" || figure.xType() == "CadX.Figure"))
 					figure.text(jerseyName);
 				else if(figure.xType() == "CadX.Number")
 					figure.text(jerseyNumber);

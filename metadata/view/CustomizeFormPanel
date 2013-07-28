@@ -130,7 +130,7 @@
                             "if(!Ext.getCmp('CheckOutPanel')){Ext.Viewport.add({xtype: 'CheckOutPanel'});}\r",
                             "Ext.getCmp('CheckOutPanel').show({type:'slideIn',direction:'left'});\r",
                             "Ext.getCmp('CustomizeFormPanel').hide();\r",
-                            "Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Ext.getCmp('ItemInfo').getData().Name);"
+                            "Ext.getCmp('CheckOutPanel').items.items[4].setTitle(Kiosk4.app.SelectedJersey);"
                         ]
                     },
                     "designerId": "caff1ebc-9594-446e-a362-8614ee538eff"

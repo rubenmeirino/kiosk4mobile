@@ -128,7 +128,7 @@
             "codeClass": null,
             "userConfig": {
                 "ui": "confirm",
-                "text": "CheckOut"
+                "text": "Preview"
             },
             "designerId": "457ea010-cf8f-46ed-93b1-1445055f6d11",
             "cn": [
@@ -150,13 +150,13 @@
                             "if(!Ext.getCmp('CustomizeFormPanel')){Ext.Viewport.add({xtype: 'CustomizeFormPanel'});}\r",
                             "Ext.getCmp('CustomizeFormPanel').show({type:'slideIn',direction:'left'});\r",
                             "Ext.getCmp('NameAndNumber').hide();\r",
-                            "Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Ext.getCmp('ItemInfo').getData().Name);\r",
+                            "Ext.getCmp('CustomizeFormPanel').items.items[1].setTitle(Kiosk4.app.SelectedJersey);\r",
                             "Kiosk4.app.jerseyNumber=Ext.getCmp('NameAndNumber').items.items[1].items.items[1].getValue()+\"\";\r",
                             "Kiosk4.app.jerseyName=Ext.getCmp('NameAndNumber').items.items[1].items.items[0].getValue();\r",
                             "/*\r",
                             "Ext.getCmp('CustomizeFormPanel').setValues({\r",
-                            "    name:Kiosk4.app.jerseyName,\r",
-                            "    number:Kiosk4.app.jerseyNumber\r",
+                            "name:Kiosk4.app.jerseyName,\r",
+                            "number:Kiosk4.app.jerseyNumber\r",
                             "});*/"
                         ]
                     },
